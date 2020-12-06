@@ -1,27 +1,223 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tech-guide</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <div class="nav-mini">
-        <a href="index.html"><img src="https://i.imgur.com/H16xz30.png" alt="" height="50px" width="auto"></a>
-        <p id="date"></p>
-        <div class="search-box">
-            <img id="enter" onclick="search()"
-                src="https://cdn.pixabay.com/photo/2016/03/31/19/14/magnifying-glass-1294834_960_720.png" width="20px"
-                height="20px" alt="">
-            <input type="text" id="search" placeholder="Tìm kiếm" autocomplete="off">
+    <div class="everything">
+        <div class="nav-mini">
+            <div>
+                <a style="margin-left: 100px;" href="index.html"><img src="https://i.imgur.com/H16xz30.png" alt=""
+                        height="50px" width="auto">
+                    <p style="margin-left: 150px; font-size: 12px;">Thủ thuật công nghệ và phần mềm</p>
+                </a>
+            </div>
+            <p id="date"></p>
+            <a style="margin-right: 100px;" class="nav-box" href="#">
+                <img src="https://i.imgur.com/7rAfKQi.png" width="40px" height="40px" alt="">
+                <p>Đăng nhập</p>
+            </a>
         </div>
-        <a class="nav-box" href="#">
-            <img src="https://i.imgur.com/7rAfKQi.png"
-                width="40px" height="40px" alt="">
-            <p>Đăng nhập</p>
-        </a>
-    </div>
-    <script src="./app.js"></script>
+        <div class="nav-main">
+            <a href="index.html"><img style="margin-left: 10px; border-radius: 50px;"
+                    src="https://i.imgur.com/AmJmzJv.png" width="30px" height="30px" alt=""></a>
+            <div class="drop" style="top: 95px;">
+                <a href="#">Công nghệ</a>
+                <div class="list">
+                    <a class="list-child" href="index.html">Ứng dụng</a>
+                    <a class="list-child" href="index.html">Hệ thống</a>
+                    <a class="list-child" href="index.html">Game - Trò chơi</a>
+                    <a class="list-child" href="index.html">Đồng hồ thông minh</a>
+                    <a class="list-child" href="index.html">Phần cứng</a>
+                </div>
+            </div>
+
+            <div class="drop" style="top: 95px;">
+                <a href="#">Tiện ích</a>
+                <div class="list">
+                    <a class="list-child" href="index.html">Tốc độ mạng</a>
+                    <a class="list-child" href="index.html">Tốc độ đánh máy</a>
+                    <a class="list-child" href="index.html">Luyện gõ 10 ngón</a>
+                    <a class="list-child" href="index.html">Photoshop</a>
+                    <a class="list-child" href="index.html">Chuyển đổi văn bản</a>
+                </div>
+            </div>
+
+            <div class="drop" style="top: 210px;">
+                <a href="#">Ứng dụng</a>
+                <div class="list">
+                    <a class="list-child" href="index.html">Chat</a>
+                    <a class="list-child" href="index.html">Mạng xã hội</a>
+                    <a class="list-child" href="index.html">Phát nhạc</a>
+                    <a class="list-child" href="index.html">Email</a>
+                    <a class="list-child" href="index.html">Trình duyệt web</a>
+                    <a class="list-child" href="index.html">Chỉnh sửa ảnh</a>
+                    <a class="list-child" href="index.html">Bộ gõ tiếng Việt</a>
+                    <a class="list-child" href="index.html">Nén file</a>
+                    <a class="list-child" href="index.html">Giả lập</a>
+                    <a class="list-child" href="index.html">Hỗ trợ Download</a>
+                    <a class="list-child" href="index.html">Gỡ cài đặt</a>
+                </div>
+            </div>
+
+            <div class="drop" style="top: 95px;">
+                <a href="#">Iphone</a>
+                <div class="list">
+                    <a class="list-child" href="index.html">Thiết lập cơ bản</a>
+                    <a class="list-child" href="index.html">Dữ liệu</a>
+                    <a class="list-child" href="index.html">Thủ thuật ứng dụng</a>
+                    <a class="list-child" href="index.html">Chụp và sử lí ảnh</a>
+                    <a class="list-child" href="index.html">Jailbreak</a>
+                </div>
+            </div>
+
+            <div class="drop" style="top: 115px;">
+                <a href="#">Android</a>
+                <div class="list">
+                    <a class="list-child" href="index.html">Thiết lập cơ bản</a>
+                    <a class="list-child" href="index.html">Dữ liệu</a>
+                    <a class="list-child" href="index.html">Thủ thuật ứng dụng</a>
+                    <a class="list-child" href="index.html">Chụp và sử lí ảnh</a>
+                    <a class="list-child" href="index.html">Bảo mật, diệt virus</a>
+                    <a class="list-child" href="index.html">Root</a>
+                </div>
+            </div>
+
+
+            <div class="drop" style="top: 115px;">
+                <a href="#">Lập trình</a>
+                <div class="list">
+                    <a class="list-child" href="index.html">Python</a>
+                    <a class="list-child" href="index.html">HTML - CSS - JS</a>
+                    <a class="list-child" href="index.html">Java</a>
+                    <a class="list-child" href="index.html">C++</a>
+                    <a class="list-child" href="index.html">PHP</a>
+                    <a class="list-child" href="index.html">Cơ sở dữ liệu</a>
+                </div>
+            </div>
+
+            <div class="drop" style="top: 115px;">
+                <a href="#">Windows</a>
+                <div class="list">
+                    <a class="list-child" href="index.html">Windows XP</a>
+                    <a class="list-child" href="index.html">Windows 7</a>
+                    <a class="list-child" href="index.html">Windows 8.1</a>
+                    <a class="list-child" href="index.html">Windows 10</a>
+                    <a class="list-child" href="index.html">Ghost - Cài lại Win</a>
+                    <a class="list-child" href="index.html">Phần mềm diệt virus</a>
+                </div>
+            </div>
+
+            <div class="drop" style="top: 115px;">
+                <a href="#">Mac OS</a>
+                <div class="list">
+                    <a class="list-child" href="index.html">Bảo mật</a>
+                    <a class="list-child" href="index.html">Quản lí Email</a>
+                    <a class="list-child" href="index.html">Dữ liệu - File</a>
+                    <a class="list-child" href="index.html">Ứng dụng văn phòng</a>
+                    <a class="list-child" href="index.html">Phần mềm hệ thống</a>
+                    <a class="list-child" href="index.html">Phần cứng Macbook</a>
+                </div>
+            </div>
+
+
+            <div class="search-box">
+                <div class="search-icon">
+                    <img id="enter" onclick="search()"
+                        src="https://cdn.pixabay.com/photo/2016/03/31/19/14/magnifying-glass-1294834_960_720.png"
+                        height="30px" width="30px" alt="">
+                </div>
+                <div class="search-input">
+                    <input type="text" id="search" placeholder="Tìm kiếm" autocomplete="off">
+                </div>
+            </div>
+        </div>
+        <div class="main">
+
+            <div class="body">
+                <a style="margin-left: 10px;" href="#">
+                    <img width="600px" height="auto" src="https://cdn.tgdd.vn//GameApp/-1//1-800x450.png" alt="">
+
+                    <h1
+                        style="position: relative; bottom: 60px; color: white; background-color: black; opacity: 0.5; height: 60px; text-align: center; margin-left: 10px;">
+                        Cách làm hộp quà trên messenger</h1>
+                </a>
+                <div class="more">
+                    <a href="">
+                        <div style="margin-right: 10px;">
+                            <h1 class="hover-color"> Dây đeo Apple Watch tích hợp camera </h1>
+                            <p>Dây đeo Apple Watch sẽ được bán tại thị trường Mỹ vào quý 1 năm 2021 với mức giá 299USD.
+                                Sản phẩm dây đeo tích hợp camera có tên gọi Wristcam, trang bị camera sau 8MP độ phân
+                                giải 4K.</p>
+                        </div>
+                    </a>
+                    <a href="">
+                        <img src="https://st.quantrimang.com/photos/image/2020/12/06/Apple-Watch-camera-day-deo-200.jpg"
+                            width="220px" height="140px" alt=""></a>
+                </div>
+
+                <div class="more">
+                    <a href="https://vnexpress.net/duc-san-sang-gia-han-phong-toa-chong-covid-19-4195435.html">
+                        <div style="margin-right: 10px;">
+                            <h1 class="hover-color">Đức sẵn sàng gia hạn phong tỏa chống Covid-19</h1>
+                            <p>Đức có thể phải gia hạn những biện pháp nhằm ngăn chặn Covid-19 sang tháng 12 do tình
+                                hình dịch bệnh
+                                hiện chưa được kiểm soát.</p>
+                        </div>
+                    </a>
+                    <a href="https://vnexpress.net/duc-san-sang-gia-han-phong-toa-chong-covid-19-4195435.html"><img
+                            src="https://i1-vnexpress.vnecdn.net/2020/11/22/s4reutersmedianet-1606046834-5008-1606049904.jpg?w=300&h=180&q=100&dpr=1&fit=crop&s=qidJLKOqrtJu8gAQ3BGn7A"
+                            width="220px" height="140px" alt=""></a>
+                </div>
+
+                <div class="more">
+                    <a
+                        href="https://vnexpress.net/ong-dam-quang-minh-thoi-lam-hieu-truong-dai-hoc-phu-xuan-4195429.html">
+                        <div style="margin-right: 10px;">
+                            <h1 class="hover-color">Ông Đàm Quang Minh thôi làm Hiệu trưởng Đại học Phú Xuân</h1>
+                            <p>Tiến sĩ Đàm Quang Minh thôi làm Hiệu trưởng Đại học Phú Xuân từ ngày 15/11, nhưng vẫn đảm
+                                nhiệm cương
+                                vị Chủ tịch Hội đồng quản trị.</p>
+                        </div>
+                    </a>
+                    <a
+                        href="https://vnexpress.net/ong-dam-quang-minh-thoi-lam-hieu-truong-dai-hoc-phu-xuan-4195429.html"><img
+                            src="https://i1-vnexpress.vnecdn.net/2020/11/22/tsdamquangminh33671557153231-1-1570-7814-1606045490.jpg?w=300&h=180&q=100&dpr=1&fit=crop&s=Bm3tW6igL-y9vea44otO-g"
+                            width="220px" height="140px" alt=""></a>
+                </div>
+            </div>
+            <div class="sidebar">
+                <h1 style="font-size: 20px; border-bottom: 1px solid blue; padding: 10px;">Có lẽ bạn sẽ quan tâm
+                </h1>
+                <a href="#">
+                    <img src="https://st.quantrimang.com/photos/image/2020/12/01/Viettel-nhan-data-5G-200-size-80x80-znd.jpg"
+                        alt="">
+                    <p>Cách nhận data 5G Viettel miễn phí, không giới hạn</p>
+                </a>
+                <a href="#">
+                    <img src="https://st.quantrimang.com/photos/image/2020/08/24/Zalo-tat-thong-bao-moi-truy-cap-200-size-80x80-znd.jpg"
+                        alt="">
+                    <p>Tắt trạng thái online Zalo như thế nào</p>
+                </a>
+                <a href="#">
+                    <img src="https://st.quantrimang.com/photos/image/2020/11/27/thuat-ngu-dien-toan-dam-may-200-size-80x80-znd.jpg"
+                        alt="">
+                    <p>Danh sách thuật ngữ viết tắt thông dụng về điện toán đám mây</p>
+                </a>
+                <a href="#">
+                    <img src="https://st.quantrimang.com/photos/image/2020/11/27/chuyen-doi-so-200-size-80x80-znd.jpg"
+                        alt="">
+                    <p>Điện toán đám mây và câu chuyện chuyển đổi số</p>
+                </a>
+            </div>
+
+        </div>
+        <script src="./app.js"></script>
 </body>
+
 </html>
