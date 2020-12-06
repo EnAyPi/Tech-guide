@@ -3,9 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Tech-guide</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div>New code</div>
+    <div class="nav-mini">
+        <a href="index.html"><img src="https://i.imgur.com/H16xz30.png" alt="" height="50px" width="auto"></a>
+        <p id="date"></p>
+        <div class="search-box">
+            <img id="enter" onclick="search()"
+                src="https://cdn.pixabay.com/photo/2016/03/31/19/14/magnifying-glass-1294834_960_720.png" width="20px"
+                height="20px" alt="">
+            <input type="text" id="search" placeholder="Tìm kiếm" autocomplete="off">
+        </div>
+        <a class="nav-box" href="#">
+            <img src="https://i.imgur.com/7rAfKQi.png"
+                width="40px" height="40px" alt="">
+            <p>Đăng nhập</p>
+        </a>
+    </div>
+    <script src="./app.js"></script>
 </body>
 </html>
