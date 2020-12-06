@@ -31,6 +31,11 @@ a:hover {
     transition: 0.3s;
 }
 
+a:hover h1 {
+    color: blue;
+    transition: 0.3s;
+}
+
 h1 {
     font-size: 30px;
     margin-bottom: 15px;
@@ -214,4 +219,17 @@ h1 {
 .more p {
     font-size: 17px;
     color: black;
+}
+
+#top-up {
+    cursor: pointer;
+    position: fixed;
+    bottom: 50px;
+    right: 40px;
+    border: 1px solid lightgray;
+    background-color: white;
+}
+
+#top-up:hover {
+    background-color: lightgray;
 }

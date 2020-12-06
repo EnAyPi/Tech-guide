@@ -23,6 +23,20 @@ switch (current_day) {
     case 6:
         day_name = "Thứ bảy";
         break;
-    }
+}
 let date = day_name + ", " + today.getDate() + "/" + today.getMonth() + "/" + today.getFullYear();
 document.getElementById("date").innerHTML = date;
+
+$(window).scroll(function () {
+    if ($(this).scrollTop() > 50) {
+        $('#top-up').fadeIn(200);
+    }
+    else {
+        $('#top-up').fadeOut(200);
+    }
+});
+$(function () {
+    $('#top-up').click(function () {
+        $('body,html').animate({ scrollTop: 0 }, 600);
+    });
+});
