@@ -26,14 +26,8 @@ a {
     color: black;
 }
 
-a:hover {
-    color: blue;
-    transition: 0.3s;
-}
-
 a:hover h1 {
     color: blue;
-    transition: 0.3s;
 }
 
 h1 {
@@ -172,7 +166,7 @@ h1 {
 }
 
 .list-child:hover {
-    background-color: lightblue;
+    background-color: #CCFFFF;
     transition: 0.3s;
 }
 
@@ -203,7 +197,7 @@ h1 {
 }
 
 .more {
-    margin-left: 10px;
+    margin-left: 50px;
     display: flex;
     justify-content: space-around;
     width: 600px;
@@ -221,6 +215,29 @@ h1 {
     color: black;
 }
 
+#more2 {
+    display: none;
+}
+
+#more3 {
+    display: none;
+}
+
+#watch-more {
+    background-color: white;
+    padding: 10px;
+    outline: none;
+    border: 2px solid lightblue;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#watch-more:hover {
+    background-color: lightblue;
+    border: 2px solid blue;
+    transition: all 0.3s;
+}
+
 #top-up {
     cursor: pointer;
     position: fixed;
@@ -232,4 +249,14 @@ h1 {
 
 #top-up:hover {
     background-color: lightgray;
+}
+
+@media only screen and (max-width:1000px) {
+    .everything {
+        width: 100%;
+        background-color: white;
+    }
+    .sidebar {
+        display: none;
+    }
 }

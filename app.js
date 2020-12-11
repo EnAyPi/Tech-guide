@@ -35,8 +35,72 @@ $(window).scroll(function () {
         $('#top-up').fadeOut(200);
     }
 });
+
 $(function () {
     $('#top-up').click(function () {
         $('body,html').animate({ scrollTop: 0 }, 600);
     });
+});
+
+$(window).scroll(function () {
+    if ($(this).scrollTop() > 90) {
+        document.getElementById("icon").style.width = "110px"; 
+        document.getElementById("icon").style.transition = "width 0.2s"
+        document.getElementById("icon").src = "https://i.imgur.com/H16xz30.png";
+        
+    } else {
+        document.getElementById("icon").style.width = "30px";
+        document.getElementById("icon").src = "https://i.imgur.com/AmJmzJv.png";
+    }
+});
+
+$(document).ready(function () {
+    $('a').bind('mouseover', function () {
+        let letters = '0123456789ABCDEF';
+        let color = '#';
+        for (let i = 0; i < 6; i++) {
+            color += letters[Math.floor(Math.random() * 16)];
+        }
+        $(this).css("color", color);
+    });
+});
+
+$(document).ready(function () {
+    $('a').bind('mouseleave', function () {
+        $(this).css("color", "black");
+    });
+});
+
+let more_count = 0;
+document.getElementById("watch-more").addEventListener("click",function(){
+    if(more_count == 0){
+        document.getElementById("loading-icon").style.display = "block";
+        document.getElementById("watch-more").style.display = "none";
+        document.getElementById("loading").style.transform = "rotate(360deg)";
+        document.getElementById("loading").style.transition = "transform 1s";
+        setTimeout(() => {
+            document.getElementById("more2").style.display = "block";
+            document.getElementById("watch-more").style.display = "block";
+            $('body,html').animate({ scrollTop: 830 }, 1);
+            document.getElementById("loading-icon").style.display = "none";
+            document.getElementById("loading").style.transform = "rotate(0deg)";
+            more_count++;
+        }, 1000);
+        
+    }else if(more_count == 1){
+        document.getElementById("loading-icon").style.display = "block";
+        document.getElementById("watch-more").style.display = "none";
+        document.getElementById("loading").style.transform = "rotate(360deg)";
+        document.getElementById("loading").style.transition = "transform 1s";
+        setTimeout(() => {
+            document.getElementById("more3").style.display = "block";
+            $('body,html').animate({ scrollTop: 1650 }, 1);
+            document.getElementById("loading-icon").style.display = "none";
+            document.getElementById("loading").style.transform = "rotate(0deg)";
+            more_count++;
+        }, 1000);
+        
+    }else{
+        document.getElementById("watch-more").style.display = "none";
+    }
 });
