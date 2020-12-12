@@ -21,6 +21,16 @@ body {
     background-color: #f8f8f8;
 }
 
+.body {
+    margin: 50px 0 0 50px;
+}
+
+p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    margin: 20px 0;
+}
+
 a {
     text-decoration: none;
     color: black;
@@ -34,17 +44,12 @@ h1 {
     font-size: 30px;
     margin-bottom: 15px;
 }
-
-.nav-mini {
-    background-color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    height: 90px;
-    border-bottom: 1px solid lightgray;
+.logo{
+    margin-left: 100px;
 }
-
+.logo p{
+    margin: 0 0 0 50px;
+}
 #search {
     height: 40px;
     width: 200px;
@@ -97,11 +102,12 @@ h1 {
 
 .nav-box {
     display: flex;
-    width: 120px;
+    width: 130px;
     justify-content: space-around;
     align-items: center;
     border-radius: 5px;
     height: 50px;
+    margin-right: 100px;
 }
 
 .nav-box p {
@@ -112,6 +118,17 @@ h1 {
     background-color: #f8f8f8;
     border: 1px solid blue;
     transition: 0.3s;
+}
+
+.nav-mini {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 90px;
+    border-bottom: 1px solid lightgray;
+    z-index: 2;
 }
 
 .nav-main {
@@ -170,6 +187,19 @@ h1 {
     transition: 0.3s;
 }
 
+.heading {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #f8f8f8;
+    border: 1px solid lightgray;
+    margin-bottom: 30px;
+}
+
+.heading img {
+    border-radius: 50px;
+}
+
 .sidebar {
     display: flex;
     flex-direction: column;
@@ -197,10 +227,9 @@ h1 {
 }
 
 .more {
-    margin-left: 50px;
     display: flex;
     justify-content: space-around;
-    width: 600px;
+    width: 100%;
     padding: 30px 0;
     border-top: 1px solid lightgray;
 }
@@ -217,10 +246,12 @@ h1 {
 
 #more2 {
     display: none;
+    width: 100%;
 }
 
 #more3 {
     display: none;
+    width: 100%;
 }
 
 #watch-more {
@@ -251,12 +282,37 @@ h1 {
     background-color: lightgray;
 }
 
-@media only screen and (max-width:1000px) {
-    .everything {
+@media only screen and (max-width: 1000px){
+    .everything{
         width: 100%;
         background-color: white;
     }
-    .sidebar {
+    .sidebar{
         display: none;
+    }
+    .nav-main{
+        display: none;
+    }
+    .nav-mini{
+        height: 50px;
+        justify-content: space-around;
+    }
+    .nav-box{
+        margin-right: 5px;
+    }
+    #date{
+        display: none;
+    }
+    .logo{
+        margin-left: 0;
+    }
+    .logo p{
+        display: none;
+    }
+    .body{
+        margin: 10px;
+    }
+    .main{
+        padding: 0;
     }
 }

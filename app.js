@@ -81,7 +81,7 @@ document.getElementById("watch-more").addEventListener("click",function(){
         setTimeout(() => {
             document.getElementById("more2").style.display = "block";
             document.getElementById("watch-more").style.display = "block";
-            $('body,html').animate({ scrollTop: 830 }, 1);
+            $('body,html').animate({ scrollTop: 965 });
             document.getElementById("loading-icon").style.display = "none";
             document.getElementById("loading").style.transform = "rotate(0deg)";
             more_count++;
@@ -94,7 +94,7 @@ document.getElementById("watch-more").addEventListener("click",function(){
         document.getElementById("loading").style.transition = "transform 1s";
         setTimeout(() => {
             document.getElementById("more3").style.display = "block";
-            $('body,html').animate({ scrollTop: 1650 }, 1);
+            $('body,html').animate({ scrollTop: 1900 });
             document.getElementById("loading-icon").style.display = "none";
             document.getElementById("loading").style.transform = "rotate(0deg)";
             more_count++;
