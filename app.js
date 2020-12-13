@@ -81,7 +81,7 @@ document.getElementById("watch-more").addEventListener("click",function(){
         setTimeout(() => {
             document.getElementById("more2").style.display = "block";
             document.getElementById("watch-more").style.display = "block";
-            $('body,html').animate({ scrollTop: 965 });
+            $('body,html').animate({ scrollTop: 968 });
             document.getElementById("loading-icon").style.display = "none";
             document.getElementById("loading").style.transform = "rotate(0deg)";
             more_count++;

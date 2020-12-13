@@ -44,12 +44,15 @@ h1 {
     font-size: 30px;
     margin-bottom: 15px;
 }
-.logo{
+
+.logo {
     margin-left: 100px;
 }
-.logo p{
+
+.logo p {
     margin: 0 0 0 50px;
 }
+
 #search {
     height: 40px;
     width: 200px;
@@ -137,6 +140,7 @@ h1 {
     align-items: center;
     width: 100%;
     position: sticky;
+    position: -webkit-sticky;
     top: 0px;
     height: 50px;
     border-bottom: 0.5px solid lightgray;
@@ -205,6 +209,7 @@ h1 {
     flex-direction: column;
     justify-content: space-between;
     position: sticky;
+    position: -webkit-sticky;
     top: 100px;
     width: 300px;
     height: 500px;
@@ -269,6 +274,15 @@ h1 {
     transition: all 0.3s;
 }
 
+.footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-top: 2px solid lightgray;
+    height: 50px;
+    color: black;
+}
+
 #top-up {
     cursor: pointer;
     position: fixed;
@@ -282,37 +296,40 @@ h1 {
     background-color: lightgray;
 }
 
-@media only screen and (max-width: 1000px){
-    .everything{
+@media only screen and (max-width: 1000px) {
+    .everything {
         width: 100%;
         background-color: white;
     }
-    .sidebar{
+    .sidebar {
         display: none;
     }
-    .nav-main{
+    .nav-main {
         display: none;
     }
-    .nav-mini{
+    .nav-mini {
         height: 50px;
         justify-content: space-around;
     }
-    .nav-box{
-        margin-right: 5px;
-    }
-    #date{
+    .nav-box {
         display: none;
     }
-    .logo{
+    #date {
+        display: none;
+    }
+    .logo {
         margin-left: 0;
     }
-    .logo p{
+    .logo p {
         display: none;
     }
-    .body{
+    .body {
         margin: 10px;
     }
-    .main{
+    .main {
         padding: 0;
+    }
+    .more p {
+        display: none;
     }
 }
