@@ -104,3 +104,24 @@ document.getElementById("watch-more").addEventListener("click",function(){
         document.getElementById("watch-more").style.display = "none";
     }
 });
+
+
+let count = 1;
+function nav_responsive() {
+    if (count % 2 == 1) {
+        document.getElementById("nav-res").style.display = "flex";
+        document.getElementById("nav-res").style.position = "fixed";
+        document.getElementById("nav-res").style.top = "0px";
+        document.getElementById("nav-res-border").style.transform = "scaleY(1)";
+        document.getElementById("nav-res-border").style.transition = "transform 0.3s";
+        count++;
+    } else {
+        document.getElementById("nav-res-border").style.transform = "scaleY(0.1)"
+        document.getElementById("nav-res-border").style.transition = "transform 0.3s"
+        setTimeout(() => {
+            document.getElementById("nav-res").style.display = "none";
+        }, 300);
+
+        count++;
+    }
+}
