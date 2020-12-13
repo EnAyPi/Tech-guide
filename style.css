@@ -282,6 +282,9 @@ h1 {
     height: 50px;
     color: black;
 }
+.footer img{
+    border-radius: 50px;
+}
 
 #top-up {
     cursor: pointer;
