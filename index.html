@@ -9,7 +9,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
-<body>
+<body onload="onloadLogin()">
     <div class="everything">
         <div class="nav-mini">
             <div class="logo">
@@ -18,10 +18,13 @@
                 </a>
             </div>
             <p id="date"></p>
-            <a class="nav-box" href="#">
-                <img src="https://i.imgur.com/7rAfKQi.png" width="40px" height="40px" alt="">
-                <p style="margin-right: 10px;">Đăng nhập</p>
-            </a>
+            <div id="login-box">
+                <div class="nav-box" style="cursor: pointer;" onclick="login()">
+                    <img src="https://i.imgur.com/7rAfKQi.png" width="40px" height="40px" alt="">
+                    <p id="login-name" style="margin-right: 10px;">Đăng nhập</p>
+                </div>
+            </div>
+
             <img id="open-nav" onclick="nav_responsive()" src="https://i.imgur.com/9YIlBZ3.png" width="30px"
                 height="30px" alt="">
         </div>
@@ -157,10 +160,10 @@
                     <div style="display: flex; align-items: center; cursor: pointer;">
                         <input type="text" id="search2" placeholder="Tìm kiếm" autocomplete="off">
                         <img style="cursor: pointer; margin-left: 10px;" onclick="search2()"
-                        src="https://cdn.pixabay.com/photo/2016/03/31/19/14/magnifying-glass-1294834_960_720.png"
-                        height="30px" width="30px" alt="">
+                            src="https://cdn.pixabay.com/photo/2016/03/31/19/14/magnifying-glass-1294834_960_720.png"
+                            height="30px" width="30px" alt="">
                     </div>
-                        
+
                 </div>
             </div>
         </div>
@@ -411,6 +414,34 @@
         </div>
     </div>
     <div id="top-up"><img width="40px" height="40px" src="https://i.imgur.com/FqxpIk3.png" alt=""></div>
+    <div class="login-screen" id="login-screen">
+        <form class="login-form animate" id="login-form">
+            <h1 style="text-align: center; margin-bottom: 20px;">Đăng nhập</h1>
+            <label for="username"><b>Tên đăng nhập</b></label><br>
+            <input minlength="8" maxlength="20" autocomplete="off" type="text" placeholder="Điền tên đăng nhập"
+                id="username" required><br>
+            <p>Tên đăng nhập gồm 8-20 kí tự</p>
+            <label for="email"><b>Email</b></label><br>
+            <div>
+                <input onkeypress="return event.charCode != 64" minlength="6"
+                    style="width: 70%; display: inline;" autocomplete="off" type="text" placeholder="Điền email"
+                    id="email" required>
+                <label style="width: 30%;" for="email">@gmail.com</label>
+            </div>
+            <br>
+            <button>Đăng nhập</button>
+        </form>
+    </div>
+    <div class="logout-screen" id="logout-screen">
+        <div class="logout-form animate">
+            <h1 style="text-align: center; margin-bottom: 20px;">Thông tin tài khoản</h1>
+            <b>Tên đăng nhập: </b>
+            <p id="username-logout"></p>
+            <b>Email: </b>
+            <p id="email-logout"></p>
+            <button onclick="logout()">Đăng xuất</button>
+        </div>
+    </div>
     <script src="./app.js"></script>
 </body>
 
