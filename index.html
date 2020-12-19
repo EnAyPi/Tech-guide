@@ -33,7 +33,7 @@
                     src="https://i.imgur.com/AmJmzJv.png" width="30px" height="30px" alt=""></a>
             <div class="drop" style="top: 95px;">
                 <a href="#">Công nghệ</a>
-                <div class="list">
+                <div class="list animate">
                     <a class="list-child" href="index.html">Ứng dụng</a>
                     <a class="list-child" href="index.html">Hệ thống</a>
                     <a class="list-child" href="index.html">Game - Trò chơi</a>
@@ -131,14 +131,49 @@
             </div>
 
 
-            <div class="search-box">
-                <div class="search-icon">
-                    <img id="enter" onclick="search()"
+            <div id="dropdown">
+                <div style="height: 50px; width: auto; display: flex; align-items: center;">
+                    <img onclick="openSearch()" class="dropbtn"
                         src="https://cdn.pixabay.com/photo/2016/03/31/19/14/magnifying-glass-1294834_960_720.png"
                         height="30px" width="30px" alt="">
                 </div>
-                <div class="search-input">
-                    <input type="text" id="search" placeholder="Tìm kiếm" autocomplete="off">
+
+                <div id="myDropdown" class="dropdown-content animate">
+                    <input autocomplete="off" type="text" placeholder="Search..." id="searchInput"
+                        onkeyup="filterFunction()">
+                    <a href="#"> Học thiết kế website để làm gì? </a>
+                    <a href="#"> Dây đeo Apple Watch tích hợp camera </a>
+                    <a href="#"> Snapdragon 888 và Kirin 9000: Chipset nào mạnh hơn? </a>
+                    <a href="#"> 20 triệu thiết bị tới từ một hãng smartphone Trung Quốc bị lén cài
+                        đặt mã độc mà người dùng không hề hay biết </a>
+                    <a href="#"> Hacker chia sẻ công khai dữ liệu đánh cắp được từ nhà sản xuất máy
+                        bay lớn thứ ba thế giới </a>
+                    <a href="#"> Cách tắt thông báo ứng dụng nhanh trên Mac </a>
+                    <a href="#"> Bị loại bỏ camera nhưng mẫu iPhone 12 Pro này vẫn được rao
+                        bán với giá trăm triệu </a>
+                    <a href="#"> Cách đổi giao diện Zing MP3 </a>
+                    <a href="#"> Tấn công mạng thôi chưa đủ, hacker còn 'táo tợn' gọi điện
+                        trực tiếp cho nạn nhân để ‘khủng bố tinh thần’ </a>
+                    <a href="#"> Cách bật, tắt bình luận Facebook cá nhân, bài đăng nhóm Facebook </a>
+                    <a href="#"> "Optional Quality Update" trên Windows 10 là gì? </a>
+                    <a href="#"> Những thủ thuật trong Windows 10 có thể bạn chưa biết </a>
+                    <a href="#"> Đối tác chính của Apple bị tấn công bởi ransomware, có thể
+                        mất tới 34 triệu USD </a>
+                    <a href="#"> Cách chọn micro mặc định trên Windows 10</a>
+                    <a href="#"> Cách kết nối và sử dụng airpods </a>
+                    <a href="#"> 5 lý do không nên mua wifi repeater </a>
+                    <a href="#"> Microsoft Flight Simulator 2020 và những con số thống kê ấn tượng sau 4 tháng phát hành
+                        chính thức </a>
+                    <a href="#"> Apple đang phát triển một mẫu AirPods Pro phiên bản ‘Lite’:
+                        Không có ANC, giá bán rẻ hơn </a>
+                    <a href="#"> Smartphone Android dùng chip Snapdragon sắp được cập nhật hệ
+                        điều hành và bảo mật trong 4 năm </a>
+                    <a href="#"> Đến lượt Microsoft thừa nhận bị hack vì lỗ hổng SolarWinds </a>
+                    <a href="#"> Cơ quan hạt nhân của Mỹ bị hacker tấn công, chưa rõ mức thiệt hại </a>
+                    <a href="#"> Sự khác biệt giữa cổng WAN và cổng LAN </a>
+                    <a href="#"> Top ứng dụng iOS đang miễn phí, giảm giá 19/12/2020 </a>
+                    <a href="#"> Top ứng dụng Android đang miễn phí và giảm giá 19/12/2020 </a>
+                    <a href="#"> Giá cước mạng 5G dự kiến ngang 4G </a>
                 </div>
             </div>
         </div>

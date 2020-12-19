@@ -71,9 +71,9 @@ $(document).ready(function () {
     });
 });
 
-let more_count = 2;
+let count_more = 2;
 document.getElementById("watch-more").addEventListener("click", function () {
-    if (more_count == 2) {
+    if (count_more == 2) {
         document.getElementById("loading-icon").style.display = "block";
         document.getElementById("watch-more").style.display = "none";
         document.getElementById("loading").style.transform = "rotate(360deg)";
@@ -83,10 +83,10 @@ document.getElementById("watch-more").addEventListener("click", function () {
             document.getElementById("watch-more").style.display = "block";
             document.getElementById("loading-icon").style.display = "none";
             document.getElementById("loading").style.transform = "rotate(0deg)";
-            more_count++;
+            count_more++;
         }, 1000);
 
-    } else if (more_count == 3) {
+    } else if (count_more == 3) {
         document.getElementById("loading-icon").style.display = "block";
         document.getElementById("watch-more").style.display = "none";
         document.getElementById("loading").style.transform = "rotate(360deg)";
@@ -96,10 +96,10 @@ document.getElementById("watch-more").addEventListener("click", function () {
             document.getElementById("watch-more").style.display = "block";
             document.getElementById("loading-icon").style.display = "none";
             document.getElementById("loading").style.transform = "rotate(0deg)";
-            more_count++;
+            count_more++;
         }, 1000);
 
-    } else if (more_count == 4) {
+    } else if (count_more == 4) {
         document.getElementById("loading-icon").style.display = "block";
         document.getElementById("watch-more").style.display = "none";
         document.getElementById("loading").style.transform = "rotate(360deg)";
@@ -109,9 +109,9 @@ document.getElementById("watch-more").addEventListener("click", function () {
             document.getElementById("watch-more").style.display = "block";
             document.getElementById("loading-icon").style.display = "none";
             document.getElementById("loading").style.transform = "rotate(0deg)";
-            more_count++;
+            count_more++;
         }, 1000);
-    } else if (more_count == 5) {
+    } else if (count_more == 5) {
         document.getElementById("loading-icon").style.display = "block";
         document.getElementById("watch-more").style.display = "none";
         document.getElementById("loading").style.transform = "rotate(360deg)";
@@ -121,9 +121,9 @@ document.getElementById("watch-more").addEventListener("click", function () {
             document.getElementById("watch-more").style.display = "block";
             document.getElementById("loading-icon").style.display = "none";
             document.getElementById("loading").style.transform = "rotate(0deg)";
-            more_count++;
+            count_more++;
         }, 1000);
-    } else if (more_count == 6) {
+    } else if (count_more == 6) {
         document.getElementById("loading-icon").style.display = "block";
         document.getElementById("watch-more").style.display = "none";
         document.getElementById("loading").style.transform = "rotate(360deg)";
@@ -132,7 +132,7 @@ document.getElementById("watch-more").addEventListener("click", function () {
             document.getElementById("more6").style.display = "block";
             document.getElementById("loading-icon").style.display = "none";
             document.getElementById("loading").style.transform = "rotate(0deg)";
-            more_count++;
+            count_more++;
         }, 1000);
     }
 });
@@ -192,6 +192,7 @@ function getLoginInfo() {
     document.getElementById("login-name-2").innerHTML = username;
     document.getElementById("username-logout").innerHTML = username;
     document.getElementById("email-logout").innerHTML = email;
+    document.getElementById("login-screen").style.display = "none";
 }
 
 function onloadLogin() {
@@ -204,3 +205,22 @@ function onloadLogin() {
 }
 
 document.getElementById("login-form").addEventListener("submit", getLoginInfo);
+
+function filterFunction() {
+    var input, filter, a, i;
+    input = document.getElementById("searchInput");
+    filter = input.value.toUpperCase();
+    div = document.getElementById("myDropdown");
+    a = div.getElementsByTagName("a");
+    let count_search = 0;
+    for (i = 0; i < a.length; i++) {
+        
+        txtValue = a[i].textContent || a[i].innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1 && count_search <=4) {
+            a[i].style.display = "block";
+            count_search++;
+        } else {
+            a[i].style.display = "none";
+        }
+    }
+}
