@@ -1,247 +1,29 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cách làm hộp quà Messenger</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-</head>
-
-<body>
-    <div class="everything">
-        <div class="nav-mini">
-            <div class="logo">
-                <a href="index.html"><img src="https://i.imgur.com/H16xz30.png" alt=""
-                        height="50px" width="auto">
-                    <p style="font-size: 12px;">Thủ thuật công nghệ và phần mềm</p>
-                </a>
-            </div>
-            <p id="date"></p>
-            <a style="margin-right: 100px;" class="nav-box" href="#">
-                <img src="https://i.imgur.com/7rAfKQi.png" width="40px" height="40px" alt="">
-                <p style="margin-right: 10px;">Đăng nhập</p>
-            </a>
-            <img id="open-nav" onclick="nav_responsive()" src="https://i.imgur.com/9YIlBZ3.png" width="30px" height="30px"
-            alt="">
+<div class="heading">
+    <div style="display: flex;">
+        <img style="margin-right: 10px;" src="https://i.imgur.com/rtFn0j4.jpg" height="60px"
+            width="60px" alt="">
+        <div>
+            <p style="margin: 0;">Chia sẻ bởi</p>
+            <p style="font-weight: bold;margin-top: 5px;">Nguyễn Anh Phong</p>
         </div>
-        <div class="nav-main">
-            <a id="icon-border" href="index.html"><img id="icon" style="margin-left: 10px; border-radius: 50px;"
-                    src="https://i.imgur.com/AmJmzJv.png" width="30px" height="30px" alt=""></a>
-            <div class="drop" style="top: 95px;">
-                <a href="#">Công nghệ</a>
-                <div class="list">
-                    <a class="list-child" href="index.html">Ứng dụng</a>
-                    <a class="list-child" href="index.html">Hệ thống</a>
-                    <a class="list-child" href="index.html">Game - Trò chơi</a>
-                    <a class="list-child" href="index.html">Đồng hồ thông minh</a>
-                    <a class="list-child" href="index.html">Phần cứng</a>
-                </div>
-            </div>
 
-            <div class="drop" style="top: 95px;">
-                <a href="#">Tiện ích</a>
-                <div class="list">
-                    <a class="list-child" href="index.html">Tốc độ mạng</a>
-                    <a class="list-child" href="index.html">Tốc độ đánh máy</a>
-                    <a class="list-child" href="index.html">Luyện gõ 10 ngón</a>
-                    <a class="list-child" href="index.html">Photoshop</a>
-                    <a class="list-child" href="index.html">Chuyển đổi văn bản</a>
-                </div>
-            </div>
-
-            <div class="drop" style="top: 210px;">
-                <a href="#">Ứng dụng</a>
-                <div class="list">
-                    <a class="list-child" href="index.html">Chat</a>
-                    <a class="list-child" href="index.html">Mạng xã hội</a>
-                    <a class="list-child" href="index.html">Phát nhạc</a>
-                    <a class="list-child" href="index.html">Email</a>
-                    <a class="list-child" href="index.html">Trình duyệt web</a>
-                    <a class="list-child" href="index.html">Chỉnh sửa ảnh</a>
-                    <a class="list-child" href="index.html">Bộ gõ tiếng Việt</a>
-                    <a class="list-child" href="index.html">Nén file</a>
-                    <a class="list-child" href="index.html">Giả lập</a>
-                    <a class="list-child" href="index.html">Hỗ trợ Download</a>
-                    <a class="list-child" href="index.html">Gỡ cài đặt</a>
-                </div>
-            </div>
-
-            <div class="drop" style="top: 95px;">
-                <a href="#">Iphone</a>
-                <div class="list">
-                    <a class="list-child" href="index.html">Thiết lập cơ bản</a>
-                    <a class="list-child" href="index.html">Dữ liệu</a>
-                    <a class="list-child" href="index.html">Thủ thuật ứng dụng</a>
-                    <a class="list-child" href="index.html">Chụp và sử lí ảnh</a>
-                    <a class="list-child" href="index.html">Jailbreak</a>
-                </div>
-            </div>
-
-            <div class="drop" style="top: 115px;">
-                <a href="#">Android</a>
-                <div class="list">
-                    <a class="list-child" href="index.html">Thiết lập cơ bản</a>
-                    <a class="list-child" href="index.html">Dữ liệu</a>
-                    <a class="list-child" href="index.html">Thủ thuật ứng dụng</a>
-                    <a class="list-child" href="index.html">Chụp và sử lí ảnh</a>
-                    <a class="list-child" href="index.html">Bảo mật, diệt virus</a>
-                    <a class="list-child" href="index.html">Root</a>
-                </div>
-            </div>
-
-
-            <div class="drop" style="top: 115px;">
-                <a href="#">Lập trình</a>
-                <div class="list">
-                    <a class="list-child" href="index.html">Python</a>
-                    <a class="list-child" href="index.html">HTML - CSS - JS</a>
-                    <a class="list-child" href="index.html">Java</a>
-                    <a class="list-child" href="index.html">C++</a>
-                    <a class="list-child" href="index.html">PHP</a>
-                    <a class="list-child" href="index.html">Cơ sở dữ liệu</a>
-                </div>
-            </div>
-
-            <div class="drop" style="top: 115px;">
-                <a href="#">Windows</a>
-                <div class="list">
-                    <a class="list-child" href="index.html">Windows XP</a>
-                    <a class="list-child" href="index.html">Windows 7</a>
-                    <a class="list-child" href="index.html">Windows 8.1</a>
-                    <a class="list-child" href="index.html">Windows 10</a>
-                    <a class="list-child" href="index.html">Ghost - Cài lại Win</a>
-                    <a class="list-child" href="index.html">Phần mềm diệt virus</a>
-                </div>
-            </div>
-
-            <div class="drop" style="top: 115px;">
-                <a href="#">Mac OS</a>
-                <div class="list">
-                    <a class="list-child" href="index.html">Bảo mật</a>
-                    <a class="list-child" href="index.html">Quản lí Email</a>
-                    <a class="list-child" href="index.html">Dữ liệu - File</a>
-                    <a class="list-child" href="index.html">Ứng dụng văn phòng</a>
-                    <a class="list-child" href="index.html">Phần mềm hệ thống</a>
-                    <a class="list-child" href="index.html">Phần cứng Macbook</a>
-                </div>
-            </div>
-            <div class="search-box">
-                <div class="search-icon">
-                    <img id="enter" onclick="search()"
-                        src="https://cdn.pixabay.com/photo/2016/03/31/19/14/magnifying-glass-1294834_960_720.png"
-                        height="30px" width="30px" alt="">
-                </div>
-                <div class="search-input">
-                    <input type="text" id="search" placeholder="Tìm kiếm" autocomplete="off">
-                </div>
-            </div>
-        </div>
-        <div class="main">
-            <div class="body">
-                <h1>Cách làm hộp quà trên Messenger</h1>
-                <div class="heading">
-                    <div style="display: flex;">
-                        <img style="margin-right: 10px;" src="https://i.imgur.com/rtFn0j4.jpg" height="60px"
-                            width="60px" alt="">
-                        <div>
-                            <p style="margin: 0;">Chia sẻ bởi</p>
-                            <p style="font-weight: bold;margin-top: 5px;">Nguyễn Anh Phong</p>
-                        </div>
-
-                    </div>
-                    <div>
-                        <a href="https://www.facebook.com/profile.php?id=100054125401462">
-                            <img
-                                src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Facebook-icon-1.png/768px-Facebook-icon-1.png"
-                                width="30px" height="30px" alt="">
-                        </a>
-                        <a href="https://twitter.com/">
-                            <img
-                                src="https://icons-for-free.com/iconfiles/png/512/app+global+ios+media+social+tweeter+icon-1320193330528303033.png"
-                                width="30px" height="30px" alt="">
-                        </a>
-                        <a href="https://www.youtube.com/channel/UCKEDezt9ebgc8ChTHGpZMjg?view_as=subscriber">
-                            <img
-                                src="https://seeklogo.net/wp-content/uploads/2020/03/YouTube-icon-SVG-512x512.png"
-                                width="30px" height="30px" alt="">
-                        </a>
-                    </div>
-
-                </div>
-                <p>Ứng dụng Messenger vừa được cập nhật một số tính năng mới trong đó có phần hiệu ứng, cho phép bạn gói
-                    tin nhắn muốn gửi dưới dạng hộp quà hay nói cách khác là làm hộp quà trên Messenger.</p>
-                <b>Hiệu ứng hộp quà trong Messenger</b>
-                <p>Để làm hộp quà trên Messenger có sự hên xui khá lớn vì tính năng này chưa được cập nhật đồng bộ đến
-                    tất cả các tài khoản. Bạn có thể thử sự may mắn của mình bằng cách thực hiện như sau:</p>
-                <p><span style="font-weight: bold;">Bước 1: </span>Xóa và cài lại Facebook Messenger</p>
-                <p>Bạn cần cập nhật Facebook Messenger lên phiên bản mới nhất.</p>
-                <ul>
-                    <li><a href="https://apps.apple.com/app/id454638411">Tải Messenger cho Iphone, Ipad</a><br></li>
-                    <li><a href="https://play.google.com/store/apps/details?id=com.facebook.orca">Tải Messenger cho Android</a></li>
-                </ul>
-                <p><span style="font-weight: bold;">Bước 2: </span>Nhập tin nhắn bất kỳ, sau đó nhấp vào biểu tượng mặt cười.</p>
-                <p><span style="font-weight: bold;">Bước 3: </span>Trên Android bạn chọn Hiệu ứng, chọn gói quà để gửi đi.</p>
-                <img src="https://st.quantrimang.com/photos/image/2020/10/18/cach-lam-hop-qua-tren-messenger.jpg" width="70%" height="auto" alt="">
-                <img src="https://st.quantrimang.com/photos/image/2020/10/18/cach-lam-hop-qua-tren-messenger-2.jpg" width="70%" height="auto" alt="">
-                <p>Thông báo tin nhắn của bạn sẽ được "gói" lại trước khi gửi đi khi nhấn vào hiệu ứng bạn đã chọn.</p>
-                <p><span style="font-weight: bold;">Bước 4: </span>Người nhận nhấp vào gói quà để mở quà và xem nội dung tin nhắn đã được gói bên trong.</p>
-            </div>
-
-            <div class="sidebar">
-                <h1 style="font-size: 20px; border-bottom: 1px solid blue; padding: 10px;">Có lẽ bạn sẽ quan tâm
-                </h1>
-                <a href="#">
-                    <img src="https://st.quantrimang.com/photos/image/2020/12/01/Viettel-nhan-data-5G-200-size-80x80-znd.jpg"
-                        alt="">
-                    <p>Cách nhận data 5G Viettel miễn phí, không giới hạn</p>
-                </a>
-                <a href="#">
-                    <img src="https://st.quantrimang.com/photos/image/2020/08/24/Zalo-tat-thong-bao-moi-truy-cap-200-size-80x80-znd.jpg"
-                        alt="">
-                    <p>Tắt trạng thái online Zalo như thế nào</p>
-                </a>
-                <a href="#">
-                    <img src="https://st.quantrimang.com/photos/image/2020/11/27/thuat-ngu-dien-toan-dam-may-200-size-80x80-znd.jpg"
-                        alt="">
-                    <p>Danh sách thuật ngữ viết tắt thông dụng về điện toán đám mây</p>
-                </a>
-                <a href="#">
-                    <img src="https://st.quantrimang.com/photos/image/2020/11/27/chuyen-doi-so-200-size-80x80-znd.jpg"
-                        alt="">
-                    <p>Điện toán đám mây và câu chuyện chuyển đổi số</p>
-                </a>
-            </div>
-        </div>
-        <div class="footer">
-            <a href="index.html">
-                <img src="https://i.imgur.com/H16xz30.png" height="40px" width="auto" alt=""></a>
-            <p style="font-size: 12px;">© 2020. Toàn bộ bản quyền thuộc Nguyễn Anh Phong <br>
-                Báo công nghệ nhiều người xem nhất. Thuộc MindX Coding School.
-            </p>
-            <p>Theo dõi Tech-guide tại</p>
-            <div>
-                
-                <a href="https://www.facebook.com/profile.php?id=100054125401462">
-                    <img
-                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Facebook-icon-1.png/768px-Facebook-icon-1.png"
-                        width="30px" height="30px" alt="">
-                </a>
-                <a href="https://twitter.com/">
-                    <img
-                        src="https://icons-for-free.com/iconfiles/png/512/app+global+ios+media+social+tweeter+icon-1320193330528303033.png"
-                        width="30px" height="30px" alt="">
-                </a>
-                <a href="https://www.youtube.com/channel/UCKEDezt9ebgc8ChTHGpZMjg?view_as=subscriber">
-                    <img
-                        src="https://seeklogo.net/wp-content/uploads/2020/03/YouTube-icon-SVG-512x512.png"
-                        width="30px" height="30px" alt="">
-                </a>
-            </div>
     </div>
-    <div id="top-up"><img width="40px" height="40px" src="https://i.imgur.com/FqxpIk3.png" alt=""></div>
-    <script src="./app.js"></script>
-</body>
+    <div>
+        <a href="https://www.facebook.com/profile.php?id=100054125401462">
+            <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Facebook-icon-1.png/768px-Facebook-icon-1.png"
+                width="30px" height="30px" alt="">
+        </a>
+        <a href="https://twitter.com/">
+            <img
+                src="https://icons-for-free.com/iconfiles/png/512/app+global+ios+media+social+tweeter+icon-1320193330528303033.png"
+                width="30px" height="30px" alt="">
+        </a>
+        <a href="https://www.youtube.com/channel/UCKEDezt9ebgc8ChTHGpZMjg?view_as=subscriber">
+            <img
+                src="https://seeklogo.net/wp-content/uploads/2020/03/YouTube-icon-SVG-512x512.png"
+                width="30px" height="30px" alt="">
+        </a>
+    </div>
 
-</html>
+</div>

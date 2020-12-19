@@ -71,9 +71,9 @@ $(document).ready(function () {
     });
 });
 
-let more_count = 0;
+let more_count = 2;
 document.getElementById("watch-more").addEventListener("click", function () {
-    if (more_count == 0) {
+    if (more_count == 2) {
         document.getElementById("loading-icon").style.display = "block";
         document.getElementById("watch-more").style.display = "none";
         document.getElementById("loading").style.transform = "rotate(360deg)";
@@ -86,20 +86,54 @@ document.getElementById("watch-more").addEventListener("click", function () {
             more_count++;
         }, 1000);
 
-    } else if (more_count == 1) {
+    } else if (more_count == 3) {
         document.getElementById("loading-icon").style.display = "block";
         document.getElementById("watch-more").style.display = "none";
         document.getElementById("loading").style.transform = "rotate(360deg)";
         document.getElementById("loading").style.transition = "transform 1s";
         setTimeout(() => {
             document.getElementById("more3").style.display = "block";
+            document.getElementById("watch-more").style.display = "block";
             document.getElementById("loading-icon").style.display = "none";
             document.getElementById("loading").style.transform = "rotate(0deg)";
             more_count++;
         }, 1000);
 
-    } else {
+    } else if (more_count == 4) {
+        document.getElementById("loading-icon").style.display = "block";
         document.getElementById("watch-more").style.display = "none";
+        document.getElementById("loading").style.transform = "rotate(360deg)";
+        document.getElementById("loading").style.transition = "transform 1s";
+        setTimeout(() => {
+            document.getElementById("more4").style.display = "block";
+            document.getElementById("watch-more").style.display = "block";
+            document.getElementById("loading-icon").style.display = "none";
+            document.getElementById("loading").style.transform = "rotate(0deg)";
+            more_count++;
+        }, 1000);
+    } else if (more_count == 5) {
+        document.getElementById("loading-icon").style.display = "block";
+        document.getElementById("watch-more").style.display = "none";
+        document.getElementById("loading").style.transform = "rotate(360deg)";
+        document.getElementById("loading").style.transition = "transform 1s";
+        setTimeout(() => {
+            document.getElementById("more5").style.display = "block";
+            document.getElementById("watch-more").style.display = "block";
+            document.getElementById("loading-icon").style.display = "none";
+            document.getElementById("loading").style.transform = "rotate(0deg)";
+            more_count++;
+        }, 1000);
+    } else if (more_count == 6) {
+        document.getElementById("loading-icon").style.display = "block";
+        document.getElementById("watch-more").style.display = "none";
+        document.getElementById("loading").style.transform = "rotate(360deg)";
+        document.getElementById("loading").style.transition = "transform 1s";
+        setTimeout(() => {
+            document.getElementById("more6").style.display = "block";
+            document.getElementById("loading-icon").style.display = "none";
+            document.getElementById("loading").style.transform = "rotate(0deg)";
+            more_count++;
+        }, 1000);
     }
 });
 
@@ -155,6 +189,7 @@ function getLoginInfo() {
     localStorage.setItem("username", username);
     localStorage.setItem("email", email);
     document.getElementById("login-name").innerHTML = username;
+    document.getElementById("login-name-2").innerHTML = username;
     document.getElementById("username-logout").innerHTML = username;
     document.getElementById("email-logout").innerHTML = email;
 }
@@ -162,6 +197,7 @@ function getLoginInfo() {
 function onloadLogin() {
     if (localStorage.getItem("username") != undefined) {
         document.getElementById("login-name").innerHTML = localStorage.getItem("username");
+        document.getElementById("login-name-2").innerHTML = localStorage.getItem("username");
         document.getElementById("username-logout").innerHTML = localStorage.getItem("username");
         document.getElementById("email-logout").innerHTML = localStorage.getItem("email");
     }

@@ -56,7 +56,7 @@ h1 {
     margin: 0 0 0 50px;
 }
 
-.login-form input[type=text], input[type=password] {
+.login-form input[type=text]{
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -89,11 +89,13 @@ h1 {
     background-color: rgba(0, 0, 0, 0.4);
     padding-top: 60px;
 }
-.login-screen p{
+
+.login-screen p {
     font-size: 12px;
     color: #6c757d;
     margin: 0 0 10px 0;
 }
+
 .login-form {
     padding: 20px;
     background-color: #fefefe;
@@ -101,6 +103,7 @@ h1 {
     border: 1px solid #888;
     width: 30%;
 }
+
 .logout-screen {
     display: none;
     position: fixed;
@@ -114,6 +117,7 @@ h1 {
     background-color: rgba(0, 0, 0, 0.4);
     padding-top: 60px;
 }
+
 .logout-screen button {
     background-color: red;
     color: white;
@@ -124,6 +128,7 @@ h1 {
     width: 100%;
     outline: none;
 }
+
 .logout-form {
     padding: 20px;
     background-color: #fefefe;
@@ -131,6 +136,7 @@ h1 {
     border: 1px solid #888;
     width: 30%;
 }
+
 .animate {
     animation: animatezoom 0.4s
 }
@@ -318,6 +324,18 @@ h1 {
     transition: 0.3s;
 }
 
+.first-img p {
+    position: relative;
+    bottom: 40px;
+    width: 100%;
+    text-align: center;
+    font-size: 25px;
+    color: white;
+    background: rgba(0, 0, 0, .6);
+    margin: 0;
+    padding: 5px;
+}
+
 .heading {
     padding: 10px;
     display: flex;
@@ -385,6 +403,21 @@ h1 {
     width: 100%;
 }
 
+#more4 {
+    display: none;
+    width: 100%;
+}
+
+#more5 {
+    display: none;
+    width: 100%;
+}
+
+#more6 {
+    display: none;
+    width: 100%;
+}
+
 #watch-more {
     background-color: white;
     padding: 10px;
@@ -427,6 +460,7 @@ h1 {
 }
 
 @media only screen and (max-width: 768px) {
+    
     h1 {
         font-size: 20px;
     }
@@ -443,15 +477,18 @@ h1 {
     .nav-mini {
         height: 50px;
         justify-content: space-around;
-        position: sticky;
-        position: -webkit-sticky;
-        top: 0px;
     }
     .nav-box {
         display: none;
     }
     #open-nav {
         display: inline;
+    }
+    .login-form{
+        width: 80%;
+    }
+    .logout-form{
+        width: 80%;
     }
     #date {
         display: none;
@@ -468,8 +505,20 @@ h1 {
     .main {
         padding: 0;
     }
+    .first-img p {
+        position: static;
+        background: transparent;
+        color: black;
+    }
     .more p {
         display: none;
+    }
+    .more img{
+        height: 100px;
+        width: auto;
+    }
+    .more h1{
+        font-weight: normal;
     }
     .footer p {
         display: none;
