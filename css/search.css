@@ -29,7 +29,6 @@
 
 .dropdown-content a {
     height: 50px;
-    overflow-x: auto;
     display: none;
     color: black;
     padding: 12px 16px;

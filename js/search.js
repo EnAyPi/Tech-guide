@@ -11,12 +11,6 @@ function filterFunction() {
     let filter = input.value.toUpperCase();
     let count_search = 0;
 
-    for (let m = 0; m < a.length; m++) {
-        if(a[m].innerText.length > 25){
-            a[m].innerText = a[m].innerText.slice(0,25) + "...";
-        }
-    }
-
     if (input.value.length == 0) {
         for (let j = 0; j < a.length; j++) {
             a[j].style.display = "none";
@@ -26,6 +20,9 @@ function filterFunction() {
             txtValue = a[i].textContent || a[i].innerText;
             if (txtValue.toUpperCase().indexOf(filter) > -1 && count_search <= 4) {
                 a[i].style.display = "block";
+                if(a[i].innerText.length > 25){
+                    a[i].innerText = a[i].innerText.slice(0,25) + "...";
+                }
                 console.log(count_search);
                 count_search++;
             } else {
