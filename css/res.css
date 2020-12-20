@@ -1,0 +1,64 @@
+@media only screen and (max-width: 768px) {
+    h1 {
+        font-size: 20px;
+    }
+    .everything {
+        width: 100%;
+        background-color: white;
+    }
+    .sidebar {
+        display: none;
+    }
+    .nav-main {
+        display: none;
+    }
+    .nav-mini {
+        height: 50px;
+        justify-content: space-around;
+    }
+    .nav-box {
+        display: none;
+    }
+    #open-nav {
+        display: inline;
+    }
+    .login-form {
+        width: 80%;
+    }
+    .logout-form {
+        width: 80%;
+    }
+    #date {
+        display: none;
+    }
+    .logo {
+        margin-left: 0;
+    }
+    .logo p {
+        display: none;
+    }
+    .body {
+        margin: 10px;
+    }
+    .main {
+        padding: 0;
+    }
+    .first-img p {
+        position: static;
+        background: transparent;
+        color: black;
+    }
+    .more p {
+        display: none;
+    }
+    .more img {
+        height: 100px;
+        width: auto;
+    }
+    .more h1 {
+        font-weight: normal;
+    }
+    .footer p {
+        display: none;
+    }
+}
