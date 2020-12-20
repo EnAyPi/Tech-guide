@@ -5,9 +5,9 @@ function onloadfunction() {
         document.getElementById("username-logout").innerHTML = localStorage.getItem("username");
         document.getElementById("email-logout").innerHTML = localStorage.getItem("email");
     } else {
+        document.getElementById("comment-login-remind").style.display = "inline"
         document.getElementById("comment-form").addEventListener("click", login);
     }
-
     if (Number(localStorage.getItem("number_comment")) > 0) {
         for (let i = 1; i <= Number(localStorage.getItem("number_comment")); i++) {
             let comment_box = localStorage.getItem("comment_content" + i);
