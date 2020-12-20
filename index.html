@@ -133,14 +133,13 @@
 
             <div id="dropdown">
                 <div style="height: 50px; width: auto; display: flex; align-items: center;">
-                    <img onclick="openSearch()" class="dropbtn"
+                    <img class="dropbtn" onclick="filterFunction()" id="search-icon"
                         src="https://cdn.pixabay.com/photo/2016/03/31/19/14/magnifying-glass-1294834_960_720.png"
                         height="30px" width="30px" alt="">
                 </div>
 
                 <div id="myDropdown" class="dropdown-content animate">
-                    <input autocomplete="off" type="text" placeholder="Search..." id="searchInput"
-                        onkeyup="filterFunction()">
+                    <input autocomplete="off" type="text" placeholder="Search..." id="searchInput" onchange="clearsearch()">
                     <a href="#"> Học thiết kế website để làm gì? </a>
                     <a href="#"> Dây đeo Apple Watch tích hợp camera </a>
                     <a href="#"> Snapdragon 888 và Kirin 9000: Chipset nào mạnh hơn? </a>
@@ -174,6 +173,11 @@
                     <a href="#"> Top ứng dụng iOS đang miễn phí, giảm giá 19/12/2020 </a>
                     <a href="#"> Top ứng dụng Android đang miễn phí và giảm giá 19/12/2020 </a>
                     <a href="#"> Giá cước mạng 5G dự kiến ngang 4G </a>
+                    <a href="#">Cách nhận data 5G Viettel miễn phí, không giới hạn</a>
+                    <a href="#">Tắt trạng thái online Zalo như thế nào</a>
+                    <a href="#">Danh sách thuật ngữ viết tắt thông dụng về điện toán đám mây</a>
+                    <a href="#">Điện toán đám mây và câu chuyện chuyển đổi số</a>
+                    <a href="#" id="search-not-found">Không tìm thấy</a>
                 </div>
             </div>
         </div>

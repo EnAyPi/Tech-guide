@@ -206,21 +206,59 @@ function onloadLogin() {
 
 document.getElementById("login-form").addEventListener("submit", getLoginInfo);
 
+
+
+let div = document.getElementById("myDropdown");
+let a = div.getElementsByTagName("a");
+for (let j = 0; j < a.length; j++) {
+    a[j].style.display = "none";
+}
+
 function filterFunction() {
-    var input, filter, a, i;
-    input = document.getElementById("searchInput");
-    filter = input.value.toUpperCase();
-    div = document.getElementById("myDropdown");
-    a = div.getElementsByTagName("a");
+    let input = document.getElementById("searchInput");
+    let filter = input.value.toUpperCase();
     let count_search = 0;
-    for (i = 0; i < a.length; i++) {
-        
-        txtValue = a[i].textContent || a[i].innerText;
-        if (txtValue.toUpperCase().indexOf(filter) > -1 && count_search <=4) {
-            a[i].style.display = "block";
-            count_search++;
+    if (input.value.length == 0) {
+        for (let j = 0; j < a.length; j++) {
+            a[j].style.display = "none";
+        }
+    } else {
+        for (let i = 0; i < a.length; i++) {
+
+            txtValue = a[i].textContent || a[i].innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1 && count_search <= 4) {
+                a[i].style.display = "block";
+                console.log(count_search);
+                count_search++;
+            } else {
+                a[i].style.display = "none";
+            }
+        }
+        if (count_search == 0) {
+            document.getElementById("search-not-found").style.display = "block";
         } else {
-            a[i].style.display = "none";
+            document.getElementById("search-not-found").style.display = "none";
         }
     }
+
 }
+
+document.getElementById("searchInput").addEventListener("keyup", function (event) {
+    document.getElementById("searchInput").addEventListener("keypress", function () {
+        for (let j = 0; j < a.length; j++) {
+            a[j].style.display = "none";
+        }
+    });
+    event.preventDefault();
+    if (event.keyCode === 13) {
+        document.getElementById("search-icon").click();
+    } else if (event.keyCode === 8) {
+        for (let j = 0; j < a.length; j++) {
+            a[j].style.display = "none";
+        }
+    } else if (event.keyCode === 46) {
+        for (let j = 0; j < a.length; j++) {
+            a[j].style.display = "none";
+        }
+    }
+});
