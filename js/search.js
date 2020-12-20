@@ -33,3 +33,11 @@ document.getElementById("searchInput").addEventListener("keyup", function (event
         document.getElementById("search-icon").click();
     }
 });
+
+document.getElementById("search2").addEventListener("keyup", function (event) {
+    sessionStorage.setItem("search", document.getElementById("search2").value);
+    event.preventDefault();
+    if (event.keyCode === 13) {
+        document.getElementById("search-icon").click();
+    }
+});

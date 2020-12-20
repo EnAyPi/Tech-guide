@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" />
 </head>
 
-<body onload="onloadLogin()">
+<body onload="onloadfuction()">
     <div class="everything">
         <div class="nav-mini">
             <div class="logo">
@@ -204,9 +204,9 @@
                     </div>
                     <div style="display: flex; align-items: center; cursor: pointer;">
                         <input type="text" id="search2" placeholder="Tìm kiếm" autocomplete="off">
-                        <img style="cursor: pointer; margin-left: 10px;" onclick="search2()"
-                            src="https://cdn.pixabay.com/photo/2016/03/31/19/14/magnifying-glass-1294834_960_720.png"
-                            height="30px" width="30px" alt="">
+                        <a href="search.html">
+                            <i style="font-size: 25px; margin-left: 10px;" class="fas fa-search"></i>
+                        </a>
                     </div>
 
                 </div>
@@ -668,6 +668,7 @@
     <script src="./js/more.js"></script>
     <script src="./js/search.js"></script>
     <script src="./js/account.js"></script>
+    <script src="./js/onload.js"></script>
 </body>
 
 </html>

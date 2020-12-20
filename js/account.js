@@ -62,15 +62,5 @@ function getLoginInfo(event) {
     }
 }
 
-function onloadLogin() {
-    if (localStorage.getItem("username") != undefined) {
-        document.getElementById("login-name").innerHTML = localStorage.getItem("username");
-        document.getElementById("login-name-2").innerHTML = localStorage.getItem("username");
-        document.getElementById("username-logout").innerHTML = localStorage.getItem("username");
-        document.getElementById("email-logout").innerHTML = localStorage.getItem("email");
-    } else {
-        document.getElementById("comment-form").addEventListener("click", login);
-    }
-}
 
 document.getElementById("login-form").addEventListener("submit", getLoginInfo);
