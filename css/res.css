@@ -6,6 +6,10 @@
         width: 100%;
         background-color: white;
     }
+    .body{
+        width: 95%;
+        margin: 0 5px;
+    }
     .sidebar {
         display: none;
     }

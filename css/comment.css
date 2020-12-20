@@ -1,0 +1,56 @@
+.comment {
+    margin: 50px 100px 50px 50px;
+    width: 53%;
+}
+
+.comment input {
+    margin-top: 10px;
+    height: 100px;
+    width: 100%;
+    padding-left: 20px;
+    outline: none;
+    border: 1px solid lightgray;
+}
+.comment input:focus{
+    border: 1px solid blue;
+    transition: 0.5s;
+}
+#send {
+    color: white;
+    margin: 10px 10px 10px 0;
+    background-color: blue;
+    border: none;
+    border-radius: 5px;
+    height: 50px;
+    width: 100px;
+    cursor: pointer;
+    outline: none;
+}
+
+.comment-list h1 {
+    background-color: lightgray;
+    color: white;
+    font-size: 17px;
+    height: 35px;
+    width: 35px;
+    border-radius: 50px;
+    padding: 7px 0px 7px 11px;
+    margin-right: 10px;
+}
+
+.comment-list {
+    display: flex;
+    align-items: center;
+    margin-left: 50px;
+    width: 53%;
+    padding: 20px 0;
+    border-bottom: 1px solid lightgray;
+}
+
+#number-comment {
+    margin: 50px 0 0 50px;
+    width: 53%;
+    border-top: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+    padding: 20px 0;
+}

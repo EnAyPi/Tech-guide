@@ -4,16 +4,18 @@
 }
 
 #searchInput {
+    outline: none;
     width: 250px;
     box-sizing: border-box;
     font-size: 16px;
     padding: 14px 20px 12px 20px;
     border: none;
-    border-bottom: 1px solid #ddd;
+    border: 1px solid lightgray;
 }
 
 #searchInput:focus {
-    outline: 3px solid #ddd;
+    border: 1px solid blue;
+    transition: border 0.3s;
 }
 
 .dropdown-content {
@@ -36,7 +38,7 @@
     display: block;
 }
 
-#dropdown a:hover {
+#dropdown-content a:hover {
     background-color: #ddd;
 }
 

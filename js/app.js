@@ -50,27 +50,9 @@ $(window).scroll(function () {
 
     } else {
         document.getElementById("icon").style.width = "30px";
-        document.getElementById("icon").src = "https://i.imgur.com/AmJmzJv.png";
+        document.getElementById("icon").src = "https://i.imgur.com/EZknHz3.png";
     }
 });
-
-$(document).ready(function () {
-    $('a').bind('mouseover', function () {
-        let letters = '0123456789ABCDEF';
-        let color = '#';
-        for (let i = 0; i < 6; i++) {
-            color += letters[Math.floor(Math.random() * 16)];
-        }
-        $(this).css("color", color);
-    });
-});
-
-$(document).ready(function () {
-    $('a').bind('mouseleave', function () {
-        $(this).css("color", "black");
-    });
-});
-
 
 let count_nav = 1;
 function nav_responsive() {

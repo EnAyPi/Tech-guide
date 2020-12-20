@@ -1,3 +1,18 @@
+.everything {
+    width: 80%;
+    background-color: white;
+}
+
+.main {
+    display: flex;
+    border-bottom: 1px solid lightgray;
+}
+
+.body {
+    width: 60%;
+    margin: 50px 0 0 50px;
+}
+
 .first-img p {
     position: relative;
     bottom: 42px;
@@ -11,6 +26,7 @@
 }
 
 .heading {
+    width: 100%;
     padding: 10px;
     display: flex;
     justify-content: space-between;

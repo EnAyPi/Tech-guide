@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="css/nav.css">
     <link rel="stylesheet" href="css/search.css">
     <link rel="stylesheet" href="css/res.css">
+    <link rel="stylesheet" href="css/comment.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" />
 </head>
@@ -139,14 +140,13 @@
 
 
             <div id="dropdown">
-                <div class="dropbtn" onclick="filterFunction()" id="search-icon"
+                <a href="search.html" class="dropbtn" id="search-icon"
                     style="height: 50px; width: auto; display: flex; align-items: center;">
                     <i style="font-size: 25px;" class="fas fa-search"></i>
-                </div>
+                </a>
 
                 <div id="myDropdown" class="dropdown-content animate">
-                    <input autocomplete="off" type="text" placeholder="Search..." id="searchInput"
-                        onchange="clearsearch()">
+                    <input autocomplete="off" type="text" placeholder="Search..." id="searchInput">
                     <a href="#"> Học thiết kế website để làm gì? </a>
                     <a href="#"> Dây đeo Apple Watch tích hợp camera </a>
                     <a href="#"> Snapdragon 888 và Kirin 9000: Chipset nào mạnh hơn? </a>
@@ -184,7 +184,6 @@
                     <a href="#">Tắt trạng thái online Zalo như thế nào</a>
                     <a href="#">Danh sách thuật ngữ viết tắt thông dụng về điện toán đám mây</a>
                     <a href="#">Điện toán đám mây và câu chuyện chuyển đổi số</a>
-                    <a href="#" id="search-not-found">Không tìm thấy</a>
                 </div>
             </div>
         </div>
@@ -200,7 +199,7 @@
                 <a class="text-nav" href="#">Mac OS</a>
                 <div class="text-nav" style="display: flex; align-items: center; justify-content: space-around;">
                     <div onclick="login()" style="display: flex; align-items: center; cursor: pointer;">
-                        <img src="https://i.imgur.com/7rAfKQi.png" width="40px" height="40px" alt="">
+                        <i style="font-size: 25px; margin: 0 10px;" class="fas fa-user-friends"></i>
                         <p id="login-name-2">Đăng nhập</p>
                     </div>
                     <div style="display: flex; align-items: center; cursor: pointer;">
@@ -574,9 +573,9 @@
                 <div style="display: flex; justify-content: center;">
                     <button id="watch-more">Xem thêm</button>
                 </div>
-                <div id="loading" style="display: flex; justify-content: center; margin-bottom: 30px;">
-                    <img id="loading-icon" style="display:none" src="https://i.imgur.com/qg5SWOk.png" height="40px"
-                        width="40px" alt="">
+                <div style="display: flex; justify-content: center; margin-bottom: 30px;">
+                    <img class="rotate" id="loading-icon" style="display:none" src="https://i.imgur.com/qg5SWOk.png"
+                        height="40px" width="40px" alt="">
                 </div>
 
             </div>
@@ -595,7 +594,7 @@
                 </a>
                 <a href="#">
                     <img src="https://st.quantrimang.com/photos/image/2020/11/27/thuat-ngu-dien-toan-dam-may-200-size-80x80-znd.jpg"
-                        alt="">
+                        width="80px" height="80px" alt="">
                     <p>Danh sách thuật ngữ viết tắt thông dụng về điện toán đám mây</p>
                 </a>
                 <a href="#">
@@ -637,17 +636,18 @@
         <form class="login-form animate" id="login-form">
             <h1 style="text-align: center; margin-bottom: 20px;">Đăng nhập</h1>
             <label for="username"><b>Tên đăng nhập</b></label><br>
-            <input minlength="8" maxlength="20" autocomplete="off" type="text" placeholder="Điền tên đăng nhập"
-                id="username" required><br>
-            <p>Tên đăng nhập gồm 8-20 kí tự</p>
+            <input autocomplete="off" type="text" placeholder="Điền tên đăng nhập" id="username" required><br>
+            <p id="error-username">Tên đăng nhập gồm 8-20 kí tự</p>
             <label for="email"><b>Email</b></label><br>
-            <div>
-                <input onkeypress="return event.charCode != 64" minlength="6" style="width: 60%; display: inline;"
-                    autocomplete="off" type="text" placeholder="Điền email" id="email" required>
-                <label style="width: 30%;" for="email">@gmail.com</label>
-            </div>
+            <input autocomplete="off" type="text" placeholder="Điền email" id="email" required>
+            <p id="error-email">Email phải bao gồm "@" và "."</p>
             <br>
-            <button>Đăng nhập</button>
+            <button id="login-submit">Đăng nhập</button>
+            <div style="display: flex; justify-content: center;">
+                <img class="rotate" id="loading-icon-login" style="display:none" src="https://i.imgur.com/qg5SWOk.png"
+                    height="40px" width="40px" alt="">
+            </div>
+
         </form>
     </div>
     <div class="logout-screen" id="logout-screen">
@@ -657,7 +657,11 @@
             <p id="username-logout"></p>
             <b>Email: </b>
             <p id="email-logout"></p>
-            <button onclick="logout()">Đăng xuất</button>
+            <button id="logout-submit" onclick="logout()">Đăng xuất</button>
+            <div style="display: flex; justify-content: center;">
+                <img class="rotate" id="loading-icon-logout" style="display:none" src="https://i.imgur.com/qg5SWOk.png"
+                    height="40px" width="40px" alt="">
+            </div>
         </div>
     </div>
     <script src="./js/app.js"></script>
