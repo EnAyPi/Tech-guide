@@ -7,6 +7,7 @@
     <title>Tech-guide</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" />
 </head>
 
 <body onload="onloadLogin()">
@@ -20,19 +21,20 @@
             <p id="date"></p>
             <div id="login-box">
                 <div class="nav-box" style="cursor: pointer;" onclick="login()">
-                    <img src="https://i.imgur.com/7rAfKQi.png" width="40px" height="40px" alt="">
+                    <i style="font-size: 25px; margin: 0 10px;" class="fas fa-user-friends"></i>
                     <p id="login-name" style="margin-right: 10px;">Đăng nhập</p>
                 </div>
             </div>
+            <div id="open-nav" onclick="nav_responsive()">
+                <i style="font-size: 25px;" class="fas fa-align-justify"></i>
+            </div>
 
-            <img id="open-nav" onclick="nav_responsive()" src="https://i.imgur.com/9YIlBZ3.png" width="30px"
-                height="30px" alt="">
         </div>
         <div class="nav-main">
             <a id="icon-border" href="index.html"><img id="icon" style="margin-left: 10px; border-radius: 50px;"
-                    src="https://i.imgur.com/AmJmzJv.png" width="30px" height="30px" alt=""></a>
-            <div class="drop" style="top: 95px;">
-                <a href="#">Công nghệ</a>
+                    src="https://i.imgur.com/EZknHz3.png" width="30px" height="30px" alt=""></a>
+            <div class="drop">
+                <a style="padding-bottom: 30px;" href="#">Công nghệ</a>
                 <div class="list animate">
                     <a class="list-child" href="index.html">Ứng dụng</a>
                     <a class="list-child" href="index.html">Hệ thống</a>
@@ -42,8 +44,8 @@
                 </div>
             </div>
 
-            <div class="drop" style="top: 95px;">
-                <a href="#">Tiện ích</a>
+            <div class="drop">
+                <a style="padding-bottom: 30px;" href="#">Tiện ích</a>
                 <div class="list">
                     <a class="list-child" href="index.html">Tốc độ mạng</a>
                     <a class="list-child" href="index.html">Tốc độ đánh máy</a>
@@ -53,8 +55,8 @@
                 </div>
             </div>
 
-            <div class="drop" style="top: 210px;">
-                <a href="#">Ứng dụng</a>
+            <div class="drop">
+                <a style="padding-bottom: 30px;" href="#">Ứng dụng</a>
                 <div class="list">
                     <a class="list-child" href="index.html">Chat</a>
                     <a class="list-child" href="index.html">Mạng xã hội</a>
@@ -70,8 +72,8 @@
                 </div>
             </div>
 
-            <div class="drop" style="top: 95px;">
-                <a href="#">Iphone</a>
+            <div class="drop">
+                <a style="padding-bottom: 30px;" href="#">Iphone</a>
                 <div class="list">
                     <a class="list-child" href="index.html">Thiết lập cơ bản</a>
                     <a class="list-child" href="index.html">Dữ liệu</a>
@@ -81,8 +83,8 @@
                 </div>
             </div>
 
-            <div class="drop" style="top: 115px;">
-                <a href="#">Android</a>
+            <div class="drop">
+                <a style="padding-bottom: 30px;" href="#">Android</a>
                 <div class="list">
                     <a class="list-child" href="index.html">Thiết lập cơ bản</a>
                     <a class="list-child" href="index.html">Dữ liệu</a>
@@ -94,8 +96,8 @@
             </div>
 
 
-            <div class="drop" style="top: 115px;">
-                <a href="#">Lập trình</a>
+            <div class="drop">
+                <a style="padding-bottom: 30px;" href="#">Lập trình</a>
                 <div class="list">
                     <a class="list-child" href="index.html">Python</a>
                     <a class="list-child" href="index.html">HTML - CSS - JS</a>
@@ -106,8 +108,8 @@
                 </div>
             </div>
 
-            <div class="drop" style="top: 115px;">
-                <a href="#">Windows</a>
+            <div class="drop">
+                <a style="padding-bottom: 30px;" href="#">Windows</a>
                 <div class="list">
                     <a class="list-child" href="index.html">Windows XP</a>
                     <a class="list-child" href="index.html">Windows 7</a>
@@ -118,8 +120,8 @@
                 </div>
             </div>
 
-            <div class="drop" style="top: 115px;">
-                <a href="#">Mac OS</a>
+            <div class="drop">
+                <a style="padding-bottom: 30px;" href="#">Mac OS</a>
                 <div class="list">
                     <a class="list-child" href="index.html">Bảo mật</a>
                     <a class="list-child" href="index.html">Quản lí Email</a>
@@ -132,14 +134,14 @@
 
 
             <div id="dropdown">
-                <div style="height: 50px; width: auto; display: flex; align-items: center;">
-                    <img class="dropbtn" onclick="filterFunction()" id="search-icon"
-                        src="https://cdn.pixabay.com/photo/2016/03/31/19/14/magnifying-glass-1294834_960_720.png"
-                        height="30px" width="30px" alt="">
+                <div class="dropbtn" onclick="filterFunction()" id="search-icon"
+                    style="height: 50px; width: auto; display: flex; align-items: center;">
+                    <i style="font-size: 25px;" class="fas fa-search"></i>
                 </div>
 
                 <div id="myDropdown" class="dropdown-content animate">
-                    <input autocomplete="off" type="text" placeholder="Search..." id="searchInput" onchange="clearsearch()">
+                    <input autocomplete="off" type="text" placeholder="Search..." id="searchInput"
+                        onchange="clearsearch()">
                     <a href="#"> Học thiết kế website để làm gì? </a>
                     <a href="#"> Dây đeo Apple Watch tích hợp camera </a>
                     <a href="#"> Snapdragon 888 và Kirin 9000: Chipset nào mạnh hơn? </a>
@@ -624,7 +626,8 @@
 
         </div>
     </div>
-    <div id="top-up"><img width="40px" height="40px" src="https://i.imgur.com/FqxpIk3.png" alt=""></div>
+    <div style="padding: 5px;" id="top-up"><img width="30px" height="30px" src="https://i.imgur.com/XfE86gl.png" alt="">
+    </div>
     <div class="login-screen" id="login-screen">
         <form class="login-form animate" id="login-form">
             <h1 style="text-align: center; margin-bottom: 20px;">Đăng nhập</h1>
