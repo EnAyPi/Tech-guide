@@ -12,7 +12,7 @@ function filterFunction() {
     document.getElementById("searchInput").value = sessionStorage.getItem("search");
     document.getElementById("search-result").innerText = sessionStorage.getItem("search");
     for (let i = 0; i < a.length; i++) {
-        txtValue = a[i].textContent || a[i].innerText;
+        txtValue = a[i].innerText;
         if (txtValue.toUpperCase().indexOf(filter) > -1) {
             more[i].style.display = "flex";
             count_search++;
@@ -26,9 +26,8 @@ function filterFunction() {
         document.getElementById("search-not-found").style.display = "none";
     }
 }
-
 document.getElementById("searchInput").addEventListener("keyup", function (event) {
-    sessionStorage.setItem("search", document.getElementById("searchInput").value)
+    sessionStorage.setItem("search", document.getElementById("searchInput").value);
     event.preventDefault();
     if (event.keyCode === 13) {
         document.getElementById("search-icon").click();
