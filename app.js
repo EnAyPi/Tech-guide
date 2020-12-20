@@ -24,7 +24,7 @@ switch (current_day) {
         day_name = "Thứ bảy";
         break;
 }
-let date = day_name + ", " + today.getDate() + "/" + today.getMonth() + "/" + today.getFullYear();
+let date = day_name + ", " + today.getDate() + "/" + (today.getMonth() + 1) + "/" + today.getFullYear();
 document.getElementById("date").innerHTML = date;
 
 $(window).scroll(function () {
