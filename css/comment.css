@@ -1,6 +1,6 @@
 .comment {
     margin: 50px 100px 50px 50px;
-    width: 53%;
+    width: 60%;
 }
 
 .comment input {
@@ -42,14 +42,14 @@
     display: flex;
     align-items: center;
     margin-left: 50px;
-    width: 53%;
+    width: 60%;
     padding: 20px 0;
     border-bottom: 1px solid lightgray;
 }
 
 #number-comment {
     margin: 50px 0 0 50px;
-    width: 53%;
+    width: 60%;
     border-bottom: 1px solid lightgray;
     padding: 20px 0;
 }

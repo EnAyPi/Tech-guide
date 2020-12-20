@@ -65,4 +65,29 @@
     .footer p {
         display: none;
     }
+    .comment{
+        margin-left: 0;
+        width: 90%;
+    }
+    .comment-list {
+        margin-left: 20px;
+        width: 90%;
+    }
+    #number-comment {
+        margin-left: 20px;
+        width: 90%;
+    }
+    .comment h1{
+        margin-left: 20px;
+    }
+    .comment input{
+        margin-left: 20px;
+        width: 90%;
+    }
+    .comment button{
+        margin-left: 20px;
+    }
+    #send{
+        margin-left: 20px;
+    }
 }
