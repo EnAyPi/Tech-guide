@@ -11,8 +11,8 @@ function filterFunction() {
     let count_search = 0;
     document.getElementById("searchInput").value = sessionStorage.getItem("search");
     document.getElementById("search-result").innerText = sessionStorage.getItem("search");
-    for (let i = 0; i < a.length; i++) {
-        txtValue = a[i].innerText;
+    for (let i = 0; i < more.length; i++) {
+        txtValue = more[i].getElementsByTagName("h1")[0].innerText;
         if (txtValue.toUpperCase().indexOf(filter) > -1) {
             more[i].style.display = "flex";
             count_search++;

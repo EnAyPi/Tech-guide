@@ -29,14 +29,6 @@
     z-index: 2;
 }
 
-.dropdown-content a {
-    height: 50px;
-    display: none;
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
 
 #dropdown:hover .dropdown-content {
     display: block;
@@ -53,4 +45,5 @@
 
 #search2:focus {
     border: 1px solid blue;
+    transition: border 0.3s;
 }
