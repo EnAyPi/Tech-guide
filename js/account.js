@@ -27,7 +27,7 @@ function logout() {
         localStorage.removeItem("email");
         document.getElementById("logout-screen").style.display = "none";
         location.reload();
-    }, 1000);
+    }, 500);
 
 }
 function getLoginInfo(event) {
@@ -57,7 +57,7 @@ function getLoginInfo(event) {
             document.getElementById("error-email").style.color = "black";
             document.getElementById("error-username").style.color = "black";
             location.reload();
-        }, 1000);
+        }, 500);
 
     }
 }

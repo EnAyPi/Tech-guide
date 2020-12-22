@@ -18,3 +18,13 @@ function onloadfunction() {
     document.getElementById("number-comment").innerHTML = Number(localStorage.getItem(document.getElementsByTagName("title")[0].innerText + " - number_comment")) + " bình luận";
 
 }
+
+function onloadmainindex(){
+    let more = document.getElementsByClassName("more");
+    for(let i = 0; i < more.length; i++){
+        more[i].style.display = "none";
+    }
+    for(let i = 0; i < 4; i++){
+        more[i].style.display = "flex";
+    }
+}

@@ -1,50 +1,25 @@
-let count_more = 2;
+let more = document.getElementsByClassName("more");
+let count_more = 4;
+let count_more_2 = 0;
 document.getElementById("watch-more").addEventListener("click", function () {
-    if (count_more == 2) {
-        document.getElementById("loading-icon").style.display = "block";
-        document.getElementById("watch-more").style.display = "none";
-        setTimeout(() => {
-            document.getElementById("more2").style.display = "block";
-            document.getElementById("watch-more").style.display = "block";
-            document.getElementById("loading-icon").style.display = "none";
-            count_more++;
-        }, 1000);
+    document.getElementById("loading-icon").style.display = "block";
+    document.getElementById("watch-more").style.display = "none";
 
-    } else if (count_more == 3) {
-        document.getElementById("loading-icon").style.display = "block";
-        document.getElementById("watch-more").style.display = "none";
-        setTimeout(() => {
-            document.getElementById("more3").style.display = "block";
-            document.getElementById("watch-more").style.display = "block";
-            document.getElementById("loading-icon").style.display = "none";
-            count_more++;
-        }, 1000);
+    setTimeout(() => {
+        count_more_2 = count_more + 2;
 
-    } else if (count_more == 4) {
-        document.getElementById("loading-icon").style.display = "block";
-        document.getElementById("watch-more").style.display = "none";
-        setTimeout(() => {
-            document.getElementById("more4").style.display = "block";
-            document.getElementById("watch-more").style.display = "block";
-            document.getElementById("loading-icon").style.display = "none";
-            count_more++;
-        }, 1000);
-    } else if (count_more == 5) {
-        document.getElementById("loading-icon").style.display = "block";
-        document.getElementById("watch-more").style.display = "none";
-        setTimeout(() => {
-            document.getElementById("more5").style.display = "block";
-            document.getElementById("watch-more").style.display = "block";
-            document.getElementById("loading-icon").style.display = "none";
-            count_more++;
-        }, 1000);
-    } else if (count_more == 6) {
-        document.getElementById("loading-icon").style.display = "block";
-        document.getElementById("watch-more").style.display = "none";
-        setTimeout(() => {
-            document.getElementById("more6").style.display = "block";
-            document.getElementById("loading-icon").style.display = "none";
-            count_more++;
-        }, 1000);
-    }
+        console.log("count_more_2: " + count_more_2);
+        for (count_more = 0; count_more <= count_more_2; count_more++) {
+            if (more[count_more] != undefined) {
+                more[count_more].style.display = "flex";
+            }
+        }
+        document.getElementById("loading-icon").style.display = "none";
+        document.getElementById("watch-more").style.display = "block";
+        if (count_more_2 > more.length - 1) {
+            document.getElementById("watch-more").style.display = "none";
+        }
+
+    }, 500);
+
 });
