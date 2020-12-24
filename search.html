@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech-guide - Search</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/account.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/search.css">
+    <link rel="stylesheet" href="css/comment.css">
+    <link rel="stylesheet" href="css/res.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" />
+    <link rel="shortcut icon" href="https://i.imgur.com/pKYZGix.png" type="image/x-icon">
+</head>
+
+<body onload="filterFunction(); onloadlogin();">
+    <div class="everything">
+        <div class="nav-mini">
+            <div class="logo">
+                <a href="index.html"><img src="https://i.imgur.com/H16xz30.png" alt="" height="50px" width="auto">
+                    <p style="font-size: 12px;">Thủ thuật công nghệ và phần mềm</p>
+                </a>
+            </div>
+            <p id="date"></p>
+            <div id="login-box">
+                <div class="nav-box" style="cursor: pointer;" onclick="login()">
+                    <i style="font-size: 25px; margin: 0 10px;" class="fas fa-user-friends"></i>
+                    <p id="login-name" style="margin-right: 10px;">Đăng nhập</p>
+                </div>
+            </div>
+            <div id="open-nav" onclick="nav_responsive()">
+                <i style="font-size: 25px;" class="fas fa-align-justify"></i>
+            </div>
+
+        </div>
+        <div class="nav-main">
+            <a id="icon-border" href="index.html"><img id="icon" style="margin-left: 10px; border-radius: 50px;"
+                    src="https://i.imgur.com/EZknHz3.png" width="30px" height="30px" alt=""></a>
+            <div class="drop">
+                <a style="padding-bottom: 30px;" href="#">Công nghệ</a>
+                <div class="list">
+                    <a class="list-child" href="index.html">Ứng dụng</a>
+                    <a class="list-child" href="index.html">Hệ thống</a>
+                    <a class="list-child" href="index.html">Game - Trò chơi</a>
+                    <a class="list-child" href="index.html">Đồng hồ thông minh</a>
+                    <a class="list-child" href="index.html">Phần cứng</a>
+                </div>
+            </div>
+
+            <div class="drop">
+                <a style="padding-bottom: 30px;" href="#">Tiện ích</a>
+                <div class="list">
+                    <a class="list-child" href="index.html">Tốc độ mạng</a>
+                    <a class="list-child" href="index.html">Tốc độ đánh máy</a>
+                    <a class="list-child" href="index.html">Luyện gõ 10 ngón</a>
+                    <a class="list-child" href="index.html">Photoshop</a>
+                    <a class="list-child" href="index.html">Chuyển đổi văn bản</a>
+                </div>
+            </div>
+
+            <div class="drop">
+                <a style="padding-bottom: 30px;" href="#">Ứng dụng</a>
+                <div class="list">
+                    <a class="list-child" href="index.html">Chat</a>
+                    <a class="list-child" href="index.html">Mạng xã hội</a>
+                    <a class="list-child" href="index.html">Phát nhạc</a>
+                    <a class="list-child" href="index.html">Email</a>
+                    <a class="list-child" href="index.html">Trình duyệt web</a>
+                    <a class="list-child" href="index.html">Chỉnh sửa ảnh</a>
+                    <a class="list-child" href="index.html">Bộ gõ tiếng Việt</a>
+                    <a class="list-child" href="index.html">Nén file</a>
+                    <a class="list-child" href="index.html">Giả lập</a>
+                    <a class="list-child" href="index.html">Hỗ trợ Download</a>
+                    <a class="list-child" href="index.html">Gỡ cài đặt</a>
+                </div>
+            </div>
+
+            <div class="drop">
+                <a style="padding-bottom: 30px;" href="#">Iphone</a>
+                <div class="list">
+                    <a class="list-child" href="index.html">Thiết lập cơ bản</a>
+                    <a class="list-child" href="index.html">Dữ liệu</a>
+                    <a class="list-child" href="index.html">Thủ thuật ứng dụng</a>
+                    <a class="list-child" href="index.html">Chụp và sử lí ảnh</a>
+                    <a class="list-child" href="index.html">Jailbreak</a>
+                </div>
+            </div>
+
+            <div class="drop">
+                <a style="padding-bottom: 30px;" href="#">Android</a>
+                <div class="list">
+                    <a class="list-child" href="index.html">Thiết lập cơ bản</a>
+                    <a class="list-child" href="index.html">Dữ liệu</a>
+                    <a class="list-child" href="index.html">Thủ thuật ứng dụng</a>
+                    <a class="list-child" href="index.html">Chụp và sử lí ảnh</a>
+                    <a class="list-child" href="index.html">Bảo mật, diệt virus</a>
+                    <a class="list-child" href="index.html">Root</a>
+                </div>
+            </div>
+
+
+            <div class="drop">
+                <a style="padding-bottom: 30px;" href="#">Lập trình</a>
+                <div class="list">
+                    <a class="list-child" href="index.html">Python</a>
+                    <a class="list-child" href="index.html">HTML - CSS - JS</a>
+                    <a class="list-child" href="index.html">Java</a>
+                    <a class="list-child" href="index.html">C++</a>
+                    <a class="list-child" href="index.html">PHP</a>
+                    <a class="list-child" href="index.html">Cơ sở dữ liệu</a>
+                </div>
+            </div>
+
+            <div class="drop">
+                <a style="padding-bottom: 30px;" href="#">Windows</a>
+                <div class="list">
+                    <a class="list-child" href="index.html">Windows XP</a>
+                    <a class="list-child" href="index.html">Windows 7</a>
+                    <a class="list-child" href="index.html">Windows 8.1</a>
+                    <a class="list-child" href="index.html">Windows 10</a>
+                    <a class="list-child" href="index.html">Ghost - Cài lại Win</a>
+                    <a class="list-child" href="index.html">Phần mềm diệt virus</a>
+                </div>
+            </div>
+
+            <div class="drop">
+                <a style="padding-bottom: 30px;" href="#">Mac OS</a>
+                <div class="list">
+                    <a class="list-child" href="index.html">Bảo mật</a>
+                    <a class="list-child" href="index.html">Quản lí Email</a>
+                    <a class="list-child" href="index.html">Dữ liệu - File</a>
+                    <a class="list-child" href="index.html">Ứng dụng văn phòng</a>
+                    <a class="list-child" href="index.html">Phần mềm hệ thống</a>
+                    <a class="list-child" href="index.html">Phần cứng Macbook</a>
+                </div>
+            </div>
+
+
+            <div id="dropdown">
+                <a href="search.html" class="dropbtn" id="search-icon"
+                    style="height: 50px; width: auto; display: flex; align-items: center;">
+                    <i style="font-size: 25px;" class="fas fa-search"></i>
+                </a>
+
+                <div id="myDropdown" class="dropdown-content animate">
+                    <input autocomplete="off" type="text" placeholder="Search..." id="searchInput">
+                </div>
+            </div>
+        </div>
+        <div id="nav-res-border">
+            <div id="nav-res">
+                <a class="text-nav" href="#">Công nghệ</a>
+                <a class="text-nav" href="#">Tiện ích</a>
+                <a class="text-nav" href="#">Ứng dụng</a>
+                <a class="text-nav" href="#">Iphone</a>
+                <a class="text-nav" href="#">Android</a>
+                <a class="text-nav" href="#">Lập trình</a>
+                <a class="text-nav" href="#">Windows</a>
+                <a class="text-nav" href="#">Mac OS</a>
+                <div class="text-nav" style="display: flex; align-items: center; justify-content: space-around;">
+                    <div onclick="login()" style="display: flex; align-items: center; cursor: pointer;">
+                        <i style="font-size: 25px; margin: 0 10px;" class="fas fa-user-friends"></i>
+                        <p id="login-name-2">Đăng nhập</p>
+                    </div>
+                    <div style="display: flex; align-items: center; cursor: pointer;">
+                        <input type="text" id="search2" placeholder="Tìm kiếm" autocomplete="off">
+                        <a href="search.html">
+                            <i style="font-size: 25px; margin-left: 10px;" class="fas fa-search"></i>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="main">
+
+            <div class="body">
+                <p style="font-size: 30px;">Kết quả tìm kết cho: <span id="search-result"
+                        style="font-weight: bold;"></span></p>
+                <p id="search-not-found" style="display: none;">Không tìm thấy</p>
+
+                <div class="more">
+                    <a href="hoc-lam-web.html">
+                        <div style="margin-right: 10px;">
+                            <h1 class="hover-color"> Học thiết kế website để làm gì? </h1>
+                            <p>Dưới đây là top 4 ngành nghề dành cho người học thiết kế web mà chắc chắn bạn sẽ phải tìm
+                                hiểu. Đặc biệt là lựa chọn tốt nhất để bạn có thể theo đuổi.</p>
+                        </div>
+                    </a>
+                    <a href="hoc-lam-web.html">
+                        <img src="https://st.quantrimang.com/photos/image/2020/12/18/hoc-thiet-ke-web-ra-lam-gi-200.jpg"
+                            width="140px" height="140px" alt=""></a>
+                </div>
+                <div class="more">
+                    <a href="">
+                        <div style="margin-right: 10px;">
+                            <h1 class="hover-color"> Dây đeo Apple Watch tích hợp camera </h1>
+                            <p>Dây đeo Apple Watch sẽ được bán tại thị trường Mỹ vào quý 1 năm 2021 với mức giá 299USD.
+                                Sản phẩm dây đeo tích hợp camera có tên gọi Wristcam, trang bị camera sau 8MP độ phân
+                                giải 4K.</p>
+                        </div>
+                    </a>
+                    <a href="">
+                        <img src="https://st.quantrimang.com/photos/image/2020/12/06/Apple-Watch-camera-day-deo-200.jpg"
+                            width="140px" height="140px" alt=""></a>
+                </div>
+
+                <div class="more">
+                    <a href="#">
+                        <div style="margin-right: 10px;">
+                            <h1 class="hover-color"> Snapdragon 888 và Kirin 9000: Chipset nào mạnh hơn? </h1>
+                            <p>Sẽ thế nào nếu hai con “quái vật” này đối đầu với nhau?</p>
+                        </div>
+                    </a>
+                    <a href="#"><img
+                            src="https://st.quantrimang.com/photos/image/2020/12/05/snapdragon-888-va-kirin-9000200.jpg"
+                            width="140px" height="140px" alt=""></a>
+                </div>
+
+                <div class="more">
+                    <a href="#">
+                        <div style="margin-right: 10px;">
+                            <h1 class="hover-color"> 20 triệu thiết bị tới từ một hãng smartphone Trung Quốc bị lén cài
+                                đặt mã độc mà người dùng không hề hay biết </h1>
+                            <p>Một vụ bê bối bảo mật với quy mô lớn vừa bị phanh phui tại Trung Quốc.</p>
+                        </div>
+                    </a>
+                    <a href="#"><img
+                            src="https://st.quantrimang.com/photos/image/2020/12/05/20-trieu-smartphone-trung-quoc-bi-len-cai-dat-ma-doc200.jpg"
+                            width="140px" height="140px" alt=""></a>
+                </div>
+
+                <div class="more">
+                    <a href="#">
+                        <div style="margin-right: 10px;">
+                            <h1 class="hover-color"> Hacker chia sẻ công khai dữ liệu đánh cắp được từ nhà sản xuất máy
+                                bay lớn thứ ba thế giới </h1>
+                            <p>Hệ thống máy tính của Embraer hiện đã trở lại hoạt động bình thường, tuy nhiên điều tai
+                                hại nhất bây giờ mới thực sự xảy đến với tập đoàn này.</p>
+                        </div>
+                    </a>
+                    <a href="#"><img
+                            src="https://st.quantrimang.com/photos/image/2020/12/07/hacker-chia-se-cong-khai-du-lieu-danh-cap-duoc-tu-nha-san-xuat-may-bay-lon-thu-ba-the-gioi200.jpg"
+                            width="140px" height="140px" alt=""></a>
+                </div>
+
+
+                <div class="more">
+                    <a href="">
+                        <div style="margin-right: 10px;">
+                            <h1 class="hover-color"> Cách tắt thông báo ứng dụng nhanh trên Mac </h1>
+                            <p>Khi đang tập trung làm việc, người dùng rất dễ bị phân tâm, thậm chí bực mình khi
+                                các
+                                ứng dụng gửi thông báo đến. Ngay sau khi nhận được thông báo từ ứng dụng, sử
+                                dụng
+                                Notification Center trên Mac để tắt thông báo cho từng ứng dụng.</p>
+                        </div>
+                    </a>
+                    <a href="">
+                        <img src="https://st.quantrimang.com/photos/image/2020/12/08/tat-thong-bao-mac-200.jpg"
+                            width="140px" height="140px" alt=""></a>
+                </div>
+
+                <div class="more">
+                    <a href="#">
+                        <div style="margin-right: 10px;">
+                            <h1 class="hover-color"> Bị loại bỏ camera nhưng mẫu iPhone 12 Pro này vẫn được rao
+                                bán
+                                với giá trăm triệu </h1>
+                            <p>iPhone 12 Pro Steath và iPhone 12 Pro Steath Gold là hai sản phẩm mới nhất tới từ
+                                hãng Caviar.</p>
+                        </div>
+                    </a>
+                    <a href="#"><img
+                            src="https://st.quantrimang.com/photos/image/2020/12/08/bi-loai-bo-camera-nhung-mau-iphone-12-pro-nay-van-duoc-rao-ban-voi-gia-tram-trieu-200.jpg"
+                            width="140px" height="140px" alt=""></a>
+                </div>
+
+                <div class="more">
+                    <a href="#">
+                        <div style="margin-right: 10px;">
+                            <h1 class="hover-color"> Cách đổi giao diện Zing MP3 </h1>
+                            <p>Zing MP3 đã cho phép bạn thay đổi giao diện trong phiên bản trải nghiệm mới. Khi
+                                đó
+                                người dùng có thể lựa chọn giao diện nghe nhạc trên Zing MP3, với những giao
+                                diện
+                                được cung cấp sẵn cho trang web.</p>
+                        </div>
+                    </a>
+                    <a href="#"><img
+                            src="https://st.quantrimang.com/photos/image/2020/12/07/Zing-MP3-doi-giao-dien-200.jpg"
+                            width="140px" height="140px" alt=""></a>
+                </div>
+                <div class="more">
+                    <a href="#">
+                        <div style="margin-right: 10px;">
+                            <h1 class="hover-color"> Tấn công mạng thôi chưa đủ, hacker còn 'táo tợn' gọi điện
+                                trực
+                                tiếp cho nạn nhân để ‘khủng bố tinh thần’ </h1>
+                            <p>Một cơ sở nha khoa ở bang Georgia, Hoa Kỳ vừa phải trải qua một trải nghiệm tệ
+                                hại
+                                với những tên tội phạm mạng.</p>
+                        </div>
+                    </a>
+                    <a href="#"><img
+                            src="https://st.quantrimang.com/photos/image/2020/12/07/hacker-goi-dien-truc-tiep-cho-nan-nhan200.jpg"
+                            width="140px" height="140px" alt=""></a>
+                </div>
+
+
+
+
+                <div class="more">
+                    <a href="">
+                        <div style="margin-right: 10px;">
+                            <h1 class="hover-color"> Cách bật, tắt bình luận Facebook cá nhân, bài đăng nhóm
+                                Facebook </h1>
+                            <p>Facebook hỗ trợ bạn tắt bình luận trong nhóm Facebook, hoặc thiết lập chế độ bình
+                                luận vào bài viết của bạn trên Facebook cá nhân.</p>
+                        </div>
+                    </a>
+                    <a href="">
+                        <img src="https://st.quantrimang.com/photos/image/2020/07/15/Facebook-tat-binh-luan-200.jpg"
+                            width="140px" height="140px" alt=""></a>
+                </div>
+
+                <div class="more">
+                    <a href="#">
+                        <div style="margin-right: 10px;">
+                            <h1 class="hover-color"> "Optional Quality Update" trên Windows 10 là gì? </h1>
+                            <p>Trên Windows 10, Windows Update đôi khi có thể cung cấp cho bạn “Optional Quality
+                                Update”. Không giống như các bản cập nhật khác, Windows sẽ không tự động cài đặt
+                                các
+                                bản cập nhật này. Vậy chính xác thì chúng là gì? Bạn có nên cài đặt chúng không?
+                            </p>
+                        </div>
+                    </a>
+                    <a href="#"><img
+                            src="https://st.quantrimang.com/photos/image/2020/12/08/optional-quality-update-200.jpg"
+                            width="140px" height="140px" alt=""></a>
+                </div>
+
+                <div class="more">
+                    <a href="#">
+                        <div style="margin-right: 10px;">
+                            <h1 class="hover-color"> Những thủ thuật trong Windows 10 có thể bạn chưa biết </h1>
+                            <p>Hệ điều hành Windows 10 là hệ điều hành tuyệt vời, nhưng làm thế nào để có thể
+                                trải
+                                nhiệm hết năng suất, tính năng của hệ điều hành này. Bài viết dưới đây sẽ giới
+                                thiệu
+                                cho các bạn một số thủ thuật còn ẩn bên trong Windows 10 mà ít người biết đến.
+                            </p>
+                        </div>
+                    </a>
+                    <a href="#"><img
+                            src="https://st.quantrimang.com/photos/image/2017/08/29/thu-thuat-windows-10-200.jpg"
+                            width="140px" height="140px" alt=""></a>
+                </div>
+                <div class="more">
+                    <a href="#">
+                        <div style="margin-right: 10px;">
+                            <h1 class="hover-color"> Đối tác chính của Apple bị tấn công bởi ransomware, có thể
+                                mất
+                                tới 34 triệu USD </h1>
+                            <p>Hacker yêu cầu Foxconn trả tới 34 triệu USD tiền chuộc dữ liệu.</p>
+                        </div>
+                    </a>
+                    <a href="#"><img
+                            src="https://st.quantrimang.com/photos/image/2020/12/08/doi-tac-chinh-cua-apple-bi-tan-cong-boi-ransomware-200.jpg"
+                            width="140px" height="140px" alt=""></a>
+                </div>
+
+
+
+
+                <div class="more">
+                    <a href="">
+                        <div style="margin-right: 10px;">
+                            <h1 class="hover-color"> Cách chọn micro mặc định trên Windows 10</h1>
+                            <p>Ngày nay, người dùng Windows 10 thường cần kết hợp nhiều micro - có thể có một micro
+                                được tích hợp sẵn trên PC, một micro trên webcam, trên tai nghe và có thể là micro
+                                cho podcast nữa. Với rất nhiều lựa chọn, dưới đây là cách thông báo cho Windows biết
+                                nên sử dụng micro nào theo mặc định.</p>
+                        </div>
+                    </a>
+                    <a href="">
+                        <img src="https://st.quantrimang.com/photos/image/2020/12/19/chon-micro-mac-dinh-200.jpg"
+                            width="140px" height="140px" alt=""></a>
+                </div>
+
+                <div class="more">
+                    <a href="#">
+                        <div style="margin-right: 10px;">
+                            <h1 class="hover-color">Cách kết nối và sử dụng airpods</h1>
+                            <p>Trong bài viết dưới đây, Quantrimang sẽ hướng dẫn bạn cách sử dụng AirPods tổng thể.
+                            </p>
+                        </div>
+                    </a>
+                    <a href="#"><img src="https://st.quantrimang.com/photos/image/2020/12/19/airpods-200.jpg"
+                            width="140px" height="140px" alt=""></a>
+                </div>
+
+                <div class="more">
+                    <a href="#">
+                        <div style="margin-right: 10px;">
+                            <h1 class="hover-color">5 lý do không nên mua wifi repeater</h1>
+                            <p>WiFi repeater thường được coi là giải pháp nhanh chóng và rẻ tiền cho các vấn đề về
+                                vùng phủ sóng với mạng không dây. Nhưng rất có thể là một repeater không giải quyết
+                                được vấn đề và như vậy thật lãng phí tiền bạc.
+                            </p>
+                        </div>
+                    </a>
+                    <a href="#"><img
+                            src="https://st.quantrimang.com/photos/image/2020/12/19/ly-do-khong-nen-mua-wifi-repeater-200.jpg"
+                            width="140px" height="140px" alt=""></a>
+                </div>
+                <div class="more">
+                    <a href="#">
+                        <div style="margin-right: 10px;">
+                            <h1 class="hover-color"> Microsoft Flight Simulator 2020 và những con số thống kê ấn
+                                tượng sau 4 tháng phát hành chính thức </h1>
+                            <p>Microsoft tiếp tục công bố những con số thống kê ấn tượng cho Flight Simulator.</p>
+                        </div>
+                    </a>
+                    <a href="#"><img
+                            src="https://st.quantrimang.com/photos/image/2020/12/18/microsoft-flight-simulator-2020-sau-4-thang-phat-hanh200.jpg"
+                            width="140px" height="140px" alt=""></a>
+                </div>
+
+
+
+
+                <div class="more">
+                    <a href="">
+                        <div style="margin-right: 10px;">
+                            <h1 class="hover-color"> Apple đang phát triển một mẫu AirPods Pro phiên bản ‘Lite’:
+                                Không có ANC, giá bán rẻ hơn </h1>
+                            <p>Apple đang phát triển một dòng tai nghetrue wireless mới nhắm vào phân khúc “dễ tiếp
+                                cận hơn” có tên AirPods Pro ‘Lite’.</p>
+                        </div>
+                    </a>
+                    <a href="">
+                        <img src="https://st.quantrimang.com/photos/image/2020/12/17/airpods-pro-lite200.jpg"
+                            width="140px" height="140px" alt=""></a>
+                </div>
+
+                <div class="more">
+                    <a href="#">
+                        <div style="margin-right: 10px;">
+                            <h1 class="hover-color"> Smartphone Android dùng chip Snapdragon sắp được cập nhật hệ
+                                điều hành và bảo mật trong 4 năm </h1>
+                            <p>Nền tảng di động Snapdragon 888 mới sẽ là bộ xử lý đầu tiên được áp dụng chế độ hỗ
+                                trợ cập nhật hệ điều hành mở rộng mới của Google và Qualcomm.</p>
+                        </div>
+                    </a>
+                    <a href="#"><img
+                            src="https://st.quantrimang.com/photos/image/2020/12/17/smartphone-android-snapdragon-se-duoc-cap-nhat-4-nam-lien-tuc200.jpg"
+                            width="140px" height="140px" alt=""></a>
+                </div>
+
+                <div class="more">
+                    <a href="#">
+                        <div style="margin-right: 10px;">
+                            <h1 class="hover-color"> Đến lượt Microsoft thừa nhận bị hack vì lỗ hổng SolarWinds
+                            </h1>
+                            <p>Microsoft vừa thừa nhận rằng hệ thống của họ bị hack bởi lỗ hổng trong phương thức
+                                cập nhật phần mềm của SolarWinds.</p>
+                        </div>
+                    </a>
+                    <a href="#"><img
+                            src="https://st.quantrimang.com/photos/image/2020/12/19/den-luot-microsoft-thua-nhan-bi-hack-vi-lo-hong-solarwinds-200.jpg"
+                            width="140px" height="140px" alt=""></a>
+                </div>
+                <div class="more">
+                    <a href="#">
+                        <div style="margin-right: 10px;">
+                            <h1 class="hover-color"> Cơ quan hạt nhân của Mỹ bị hacker tấn công, chưa rõ mức thiệt
+                                hại </h1>
+                            <p>Thế giới sẽ rơi vào tình trạng báo động nếu hacker chiếm được quyền kiểm soát vũ khí
+                                hạt nhân của Mỹ.</p>
+                        </div>
+                    </a>
+                    <a href="#"><img
+                            src="https://st.quantrimang.com/photos/image/2020/12/19/co-quan-hat-nhan-cua-my-bi-hacker-tan-cong-chua-ro-muc-thiet-hai-200.jpg"
+                            width="140px" height="140px" alt=""></a>
+                </div>
+
+
+
+                <div class="more">
+                    <a href="">
+                        <div style="margin-right: 10px;">
+                            <h1 class="hover-color"> Sự khác biệt giữa cổng WAN và cổng LAN </h1>
+                            <p>Nếu nhìn vào router không dây của mình, bạn có thể thấy các chữ viết tắt LAN và WAN,
+                                thường nằm bên cạnh một số cổng trên thiết bị.</p>
+                        </div>
+                    </a>
+                    <a href="">
+                        <img src="https://st.quantrimang.com/photos/image/2020/12/15/cong-wan-va-cong-lan-200.jpg"
+                            width="140px" height="140px" alt=""></a>
+                </div>
+
+                <div class="more">
+                    <a href="#">
+                        <div style="margin-right: 10px;">
+                            <h1 class="hover-color"> Top ứng dụng iOS đang miễn phí, giảm giá 19/12/2020 </h1>
+                            <p>Nếu đang sử dụng iDevice bạn nhớ bookmark lại trang này để kiếm được những ứng dụng
+                                mình cần với mức giá ưu đãi bạn nha.</p>
+                        </div>
+                    </a>
+                    <a href="#"><img
+                            src="https://st.quantrimang.com/photos/image/2018/12/08/top-ung-dung-iphone-giam-gia-200.jpg"
+                            width="140px" height="140px" alt=""></a>
+                </div>
+
+                <div class="more">
+                    <a href="#">
+                        <div style="margin-right: 10px;">
+                            <h1 class="hover-color"> Top ứng dụng Android đang miễn phí và giảm giá 19/12/2020 </h1>
+                            <p>Bạn phải làm sao để tìm thấy những ứng dụng Android đang giảm giá, ứng dụng Android
+                                miễn phí ngày hôm nay 19/12/2020?</p>
+                        </div>
+                    </a>
+                    <a href="#"><img
+                            src="https://st.quantrimang.com/photos/image/2018/01/13/nhung-ung-dung-mien-phi-200.jpg"
+                            width="140px" height="140px" alt=""></a>
+                </div>
+                <div class="more">
+                    <a href="#">
+                        <div style="margin-right: 10px;">
+                            <h1 class="hover-color"> Giá cước mạng 5G dự kiến ngang 4G </h1>
+                            <p>Giá cước mạng 5G dự kiến sẽ ngang với mạng 4G hiện tại, đồng thời người dùng không
+                                cần phải đổi sim.</p>
+                        </div>
+                    </a>
+                    <a href="#"><img src="https://st.quantrimang.com/photos/image/2020/12/18/gia-cuoc-5g-200.jpg"
+                            width="140px" height="140px" alt=""></a>
+                </div>
+                <div class="more">
+                    <a href="#">
+                        <div style="margin-right: 10px;">
+                            <h1 class="hover-color">Cách nhận data 5G Viettel miễn phí, không giới hạn </h1>
+                            <p>Viettel đã triển khai mạng 5G tại một số địa điểm để khách hàng có thể trải nghiệm. Và
+                                hiện tại Viettel cũng đã triển khai chương trình cung cấp trải nghiệm 5G miễn phí tới
+                                khách hàng.</p>
+                        </div>
+                    </a>
+                    <a href="#"><img
+                            src="https://st.quantrimang.com/photos/image/2020/12/01/Viettel-nhan-data-5G-200.jpg"
+                            width="140px" height="140px" alt=""></a>
+                </div>
+                <div class="more">
+                    <a href="#">
+                        <div style="margin-right: 10px;">
+                            <h1 class="hover-color">Tắt trạng thái online Zalo như thế nào? </h1>
+                            <p>Zalo sẽ luôn hiển thị thời gian truy cập của tất cả các tài khoản ở lần truy cập gần đây
+                                nhất. Nếu muốn bạn có thể tắt thông báo mới truy cập trên Zalo như khi ẩn nick Facebook
+                                ngay cả khi online.</p>
+                        </div>
+                    </a>
+                    <a href="#"><img src="https://st.quantrimang.com/photos/image/2020/12/18/gia-cuoc-5g-200.jpg"
+                            width="140px" height="140px" alt=""></a>
+                </div>
+                <div class="more">
+                    <a href="#">
+                        <div style="margin-right: 10px;">
+                            <h1 class="hover-color">Danh sách thuật ngữ viết tắt thông dụng về điện toán đám mây</h1>
+                            <p>Công nghệ điện toán đám mây có lẽ là một mảng với nhiều thuật ngữ viết tắt, đặc biệt là
+                                Amazon Web Services, công nghệ điện toán đám mây phổ biến nhất vào thời điểm hiện tại.
+                            </p>
+                        </div>
+                    </a>
+                    <a href="#"><img
+                            src="https://st.quantrimang.com/photos/image/2020/11/27/thuat-ngu-dien-toan-dam-may-200.jpg"
+                            width="140px" height="140px" alt=""></a>
+                </div>
+                <div class="more">
+                    <a href="#">
+                        <div style="margin-right: 10px;">
+                            <h1 class="hover-color">Điện toán đám mây và câu chuyện chuyển đổi số</h1>
+                            <p>Bước đi đầu tiên cũng là bước đi hiệu quả, mạnh mẽ nhất chính là áp dụng điện toán đám
+                                mây. Điện toán đám mây được Eric Griffith ví von như “phép ẩn dụ cho internet".</p>
+                        </div>
+                    </a>
+                    <a href="#"><img src="https://st.quantrimang.com/photos/image/2020/11/27/chuyen-doi-so-200.jpg"
+                            width="140px" height="140px" alt=""></a>
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+    </div>
+    <div style="padding: 5px;" id="top-up"><img width="30px" height="30px" src="https://i.imgur.com/XfE86gl.png" alt="">
+    </div>
+    <div class="login-screen" id="login-screen">
+        <form class="login-form animate" id="login-form">
+            <h1 style="text-align: center; margin-bottom: 20px;">Đăng nhập</h1>
+            <label for="username"><b>Tên đăng nhập</b></label><br>
+            <input autocomplete="off" type="text" placeholder="Điền tên đăng nhập" id="username" required><br>
+            <p id="error-username">Tên đăng nhập gồm 8-20 kí tự</p>
+            <label for="email"><b>Email</b></label><br>
+            <input autocomplete="off" type="text" placeholder="Điền email" id="email" required>
+            <p id="error-email">Email phải bao gồm "@" và "."</p>
+            <br>
+            <button id="login-submit">Đăng nhập</button>
+            <div style="display: flex; justify-content: center;">
+                <img class="rotate" id="loading-icon-login" style="display:none" src="https://i.imgur.com/qg5SWOk.png"
+                    height="40px" width="40px" alt="">
+            </div>
+
+        </form>
+    </div>
+    <div class="logout-screen" id="logout-screen">
+        <div class="logout-form animate">
+            <h1 style="text-align: center; margin-bottom: 20px;">Thông tin tài khoản</h1>
+            <b>Tên đăng nhập: </b>
+            <p id="username-logout"></p>
+            <b>Email: </b>
+            <p id="email-logout"></p>
+            <button id="logout-submit" onclick="logout()">Đăng xuất</button>
+            <div style="display: flex; justify-content: center;">
+                <img class="rotate" id="loading-icon-logout" style="display:none" src="https://i.imgur.com/qg5SWOk.png"
+                    height="40px" width="40px" alt="">
+            </div>
+        </div>
+    </div>
+    <script src="./js/app.js"></script>
+    <script src="./js/search.js"></script>
+    <script src="./js/account.js"></script>
+    <script src="./js/onload.js"></script>
+</body>
+
+</html>

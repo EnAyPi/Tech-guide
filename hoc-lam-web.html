@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Học thiết kế website để làm gì?</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/account.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/search.css">
+    <link rel="stylesheet" href="css/comment.css">
+    <link rel="stylesheet" href="css/res.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" />
+    <link rel="shortcut icon" href="https://i.imgur.com/pKYZGix.png" type="image/x-icon">
+</head>
+
+<body onload="onloadlogin(); onloadcomment();">
+    <div class="everything">
+        <div class="nav-mini">
+            <div class="logo">
+                <a href="index.html"><img src="https://i.imgur.com/H16xz30.png" alt="" height="50px" width="auto">
+                    <p style="font-size: 12px;">Thủ thuật công nghệ và phần mềm</p>
+                </a>
+            </div>
+            <p id="date"></p>
+            <div id="login-box">
+                <div class="nav-box" style="cursor: pointer;" onclick="login()">
+                    <i style="font-size: 25px; margin: 0 10px;" class="fas fa-user-friends"></i>
+                    <p id="login-name" style="margin-right: 10px;">Đăng nhập</p>
+                </div>
+            </div>
+            <div id="open-nav" onclick="nav_responsive()">
+                <i style="font-size: 25px;" class="fas fa-align-justify"></i>
+            </div>
+
+        </div>
+        <div class="nav-main">
+            <a id="icon-border" href="index.html"><img id="icon" style="margin-left: 10px; border-radius: 50px;"
+                    src="https://i.imgur.com/EZknHz3.png" width="30px" height="30px" alt=""></a>
+            <div class="drop">
+                <a style="padding-bottom: 30px;" href="#">Công nghệ</a>
+                <div class="list">
+                    <a class="list-child" href="index.html">Ứng dụng</a>
+                    <a class="list-child" href="index.html">Hệ thống</a>
+                    <a class="list-child" href="index.html">Game - Trò chơi</a>
+                    <a class="list-child" href="index.html">Đồng hồ thông minh</a>
+                    <a class="list-child" href="index.html">Phần cứng</a>
+                </div>
+            </div>
+
+            <div class="drop">
+                <a style="padding-bottom: 30px;" href="#">Tiện ích</a>
+                <div class="list">
+                    <a class="list-child" href="index.html">Tốc độ mạng</a>
+                    <a class="list-child" href="index.html">Tốc độ đánh máy</a>
+                    <a class="list-child" href="index.html">Luyện gõ 10 ngón</a>
+                    <a class="list-child" href="index.html">Photoshop</a>
+                    <a class="list-child" href="index.html">Chuyển đổi văn bản</a>
+                </div>
+            </div>
+
+            <div class="drop">
+                <a style="padding-bottom: 30px;" href="#">Ứng dụng</a>
+                <div class="list">
+                    <a class="list-child" href="index.html">Chat</a>
+                    <a class="list-child" href="index.html">Mạng xã hội</a>
+                    <a class="list-child" href="index.html">Phát nhạc</a>
+                    <a class="list-child" href="index.html">Email</a>
+                    <a class="list-child" href="index.html">Trình duyệt web</a>
+                    <a class="list-child" href="index.html">Chỉnh sửa ảnh</a>
+                    <a class="list-child" href="index.html">Bộ gõ tiếng Việt</a>
+                    <a class="list-child" href="index.html">Nén file</a>
+                    <a class="list-child" href="index.html">Giả lập</a>
+                    <a class="list-child" href="index.html">Hỗ trợ Download</a>
+                    <a class="list-child" href="index.html">Gỡ cài đặt</a>
+                </div>
+            </div>
+
+            <div class="drop">
+                <a style="padding-bottom: 30px;" href="#">Iphone</a>
+                <div class="list">
+                    <a class="list-child" href="index.html">Thiết lập cơ bản</a>
+                    <a class="list-child" href="index.html">Dữ liệu</a>
+                    <a class="list-child" href="index.html">Thủ thuật ứng dụng</a>
+                    <a class="list-child" href="index.html">Chụp và sử lí ảnh</a>
+                    <a class="list-child" href="index.html">Jailbreak</a>
+                </div>
+            </div>
+
+            <div class="drop">
+                <a style="padding-bottom: 30px;" href="#">Android</a>
+                <div class="list">
+                    <a class="list-child" href="index.html">Thiết lập cơ bản</a>
+                    <a class="list-child" href="index.html">Dữ liệu</a>
+                    <a class="list-child" href="index.html">Thủ thuật ứng dụng</a>
+                    <a class="list-child" href="index.html">Chụp và sử lí ảnh</a>
+                    <a class="list-child" href="index.html">Bảo mật, diệt virus</a>
+                    <a class="list-child" href="index.html">Root</a>
+                </div>
+            </div>
+
+
+            <div class="drop">
+                <a style="padding-bottom: 30px;" href="#">Lập trình</a>
+                <div class="list">
+                    <a class="list-child" href="index.html">Python</a>
+                    <a class="list-child" href="index.html">HTML - CSS - JS</a>
+                    <a class="list-child" href="index.html">Java</a>
+                    <a class="list-child" href="index.html">C++</a>
+                    <a class="list-child" href="index.html">PHP</a>
+                    <a class="list-child" href="index.html">Cơ sở dữ liệu</a>
+                </div>
+            </div>
+
+            <div class="drop">
+                <a style="padding-bottom: 30px;" href="#">Windows</a>
+                <div class="list">
+                    <a class="list-child" href="index.html">Windows XP</a>
+                    <a class="list-child" href="index.html">Windows 7</a>
+                    <a class="list-child" href="index.html">Windows 8.1</a>
+                    <a class="list-child" href="index.html">Windows 10</a>
+                    <a class="list-child" href="index.html">Ghost - Cài lại Win</a>
+                    <a class="list-child" href="index.html">Phần mềm diệt virus</a>
+                </div>
+            </div>
+
+            <div class="drop">
+                <a style="padding-bottom: 30px;" href="#">Mac OS</a>
+                <div class="list">
+                    <a class="list-child" href="index.html">Bảo mật</a>
+                    <a class="list-child" href="index.html">Quản lí Email</a>
+                    <a class="list-child" href="index.html">Dữ liệu - File</a>
+                    <a class="list-child" href="index.html">Ứng dụng văn phòng</a>
+                    <a class="list-child" href="index.html">Phần mềm hệ thống</a>
+                    <a class="list-child" href="index.html">Phần cứng Macbook</a>
+                </div>
+            </div>
+
+
+            <div id="dropdown">
+                <a href="search.html" class="dropbtn" id="search-icon"
+                    style="height: 50px; width: auto; display: flex; align-items: center;">
+                    <i style="font-size: 25px;" class="fas fa-search"></i>
+                </a>
+
+                <div id="myDropdown" class="dropdown-content animate">
+                    <input autocomplete="off" type="text" placeholder="Search..." id="searchInput">
+                </div>
+            </div>
+        </div>
+        <div id="nav-res-border">
+            <div id="nav-res">
+                <a class="text-nav" href="#">Công nghệ</a>
+                <a class="text-nav" href="#">Tiện ích</a>
+                <a class="text-nav" href="#">Ứng dụng</a>
+                <a class="text-nav" href="#">Iphone</a>
+                <a class="text-nav" href="#">Android</a>
+                <a class="text-nav" href="#">Lập trình</a>
+                <a class="text-nav" href="#">Windows</a>
+                <a class="text-nav" href="#">Mac OS</a>
+                <div class="text-nav" style="display: flex; align-items: center; justify-content: space-around;">
+                    <div onclick="login()" style="display: flex; align-items: center; cursor: pointer;">
+                        <i style="font-size: 25px; margin: 0 10px;" class="fas fa-user-friends"></i>
+                        <p id="login-name-2">Đăng nhập</p>
+                    </div>
+                    <div style="display: flex; align-items: center; cursor: pointer;">
+                        <input type="text" id="search2" placeholder="Tìm kiếm" autocomplete="off">
+                        <a href="search.html">
+                            <i style="font-size: 25px; margin-left: 10px;" class="fas fa-search"></i>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="main">
+
+            <div class="body">
+                <h1 style="margin: 30px 0; font-size: 30px;">Học thiết kế website để làm gì?</h1>
+                <div class="heading">
+                    <div style="display: flex;">
+                        <img style="margin-right: 10px;" src="https://i.imgur.com/rtFn0j4.jpg" height="60px"
+                            width="60px" alt="">
+                        <div>
+                            <p style="margin: 0;">Chia sẻ bởi</p>
+                            <p style="font-weight: bold;margin-top: 5px;">Nguyễn Anh Phong</p>
+                        </div>
+
+                    </div>
+                    <div>
+                        <a href="https://www.facebook.com/profile.php?id=100054125401462">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Facebook-icon-1.png/768px-Facebook-icon-1.png"
+                                width="30px" height="30px" alt="">
+                        </a>
+                        <a href="https://twitter.com/">
+                            <img src="https://icons-for-free.com/iconfiles/png/512/app+global+ios+media+social+tweeter+icon-1320193330528303033.png"
+                                width="30px" height="30px" alt="">
+                        </a>
+                        <a href="https://www.youtube.com/channel/UCKEDezt9ebgc8ChTHGpZMjg?view_as=subscriber">
+                            <img src="https://seeklogo.net/wp-content/uploads/2020/03/YouTube-icon-SVG-512x512.png"
+                                width="30px" height="30px" alt="">
+                        </a>
+                    </div>
+
+                </div>
+
+                <p>Với số lượng lớn người dùng truy cập website mỗi ngày, Internet trở thành “mảnh đất màu mỡ” để các
+                    đơn vị, tổ chức, cá nhân tận dụng cơ hội để đưa thương hiệu của mình gần hơn đến khách hàng. Chính
+                    vì thế, nghề thiết kế website cũng nhanh chóng phát triển và thu hút nguồn nhân lực đông đảo.</p>
+                <p>Dưới đây là top 4 ngành nghề dành cho người học thiết kế web mà chắc chắn bạn sẽ phải tìm hiểu. Đặc
+                    biệt là lựa chọn tốt nhất để bạn có thể theo đuổi.</p>
+                <h2>Chuyên viên thiết kế website (Web designer)</h2>
+                <p>Ngày nay, khi mạng xã hội ngày càng phát triển thì hình thức kinh doanh trực tiếp càng phổ biến. Bởi
+                    vậy tùy vào mục đích của người dùng đối với website mà việc sử dụng chúng trở nên đa dạng và có
+                    nhiều lợi ích. Hơn thế nữa, nhiều doanh nghiệp sẽ tập trung đầu tư website chuyên nghiệp để nhanh
+                    chóng thu hút khách hàng, thúc đẩy doanh số và khẳng định thương hiệu.</p>
+                <img src="https://st.quantrimang.com/photos/image/2020/12/18/hoc-thiet-ke-web-ra-lam-gi-1.jpg"
+                    width="100%" alt="">
+                <p>Để có thể đạt được những mong muốn đó, chủ sở hữu website rất cần những chuyên viên thiết kế website
+                    nhiều kinh nghiệm và uy tín. Hiểu một cách đơn giản, thì công việc chủ yếu của một web designer là
+                    tạo ra website thông qua các công cụ hỗ trợ để thiết kế ra những trang web chất lượng và có sức hút
+                    với người dùng.</p>
+                <h2>Lập trình viên (Developer)</h2>
+                <p>Lập trình viên (Developer) được hiểu là công việc của một kỹ sư phần mềm. Nhiệm vụ chính của họ là sử
+                    dụng nhiều ngôn ngữ lập trình để xử lý các đoạn mã website. Có thể nói, đây là một trong những ngành
+                    khó bởi đòi hỏi sự sáng tạo, các kỹ năng đánh giá và phân tích chuyên môn cao.</p>
+                <p>Do đó, mức lương của lập trình viên (Developer) được chi trả khá cao và rất dễ dàng được tăng lương
+                    theo kinh nghiệm. Với nghề này, sau khi học xong, bạn có thể xin vào vị trí nhân viên IT cho các
+                    doanh nghiệp lớn hoặc công ty thiết kế phần mềm, tổ chức kinh doanh thương mại, công nghệ.</p>
+                <h2>Chuyên viên phát triển mobile (Mobile App Developer)</h2>
+                <p>Đây cũng là kiểu công việc lập trình viên phần mềm nhưng chuyên về lĩnh vực công nghệ di động, tạo
+                    ứng dụng cho các nền tảng Windows Phone, Android và iOS. Mục đích công việc chính của những chuyên
+                    viên phát triển mobile là tiếp tục nâng cao chất lượng sản phẩm thông qua khả năng nghiên cứu và cập
+                    nhật các ứng dụng hiện đại trên thế giới.</p>
+                <img src="https://st.quantrimang.com/photos/image/2020/12/18/hoc-thiet-ke-web-ra-lam-gi-2.jpg"
+                    width="100%" alt="">
+                <p>Nếu bạn thực sự giỏi cũng như giàu vốn ngoại ngữ thì trong tương lai bạn hoàn toàn có thể đảm nhận
+                    những vị trí tốt nhất với mức lương vô cùng hấp dẫn. Tuy nhiên ngoài những yếu tố về kinh nghiệm làm
+                    việc, bạn cần phải có sức chịu đựng áp lực công việc tương đối cao.</p>
+                <h2>Chuyên viên phát triển web (Web Developer)</h2>
+                <p>Web Developer được đánh giá là nghề hấp dẫn nhất dành cho người học thiết kế web làm việc trong lĩnh
+                    vực công nghệ thông tin. Một nhân viên làm Web Developer phải chịu trách nhiệm thực hiện và xây dựng
+                    hệ thống website cũng như tính năng của nó để mang đến cho người dùng trải nghiệm tốt nhất.</p>
+                <p>Hơn nữa, các chuyên viên phát triển web đều được biết đến là những người sở hữu lối tư duy logic và
+                    một bộ óc thông minh để cho ra nhiều thuật toán mà không phải ai cũng làm được. Bởi vậy lương ở vị
+                    trí này thường được chi trả vượt trội hơn các vị trí khác.</p>
+                <p>Thiết kế website là một trong những ngành nghề có cơ hội phát triển mạnh mẽ trong thời đại công nghệ
+                    số hiện nay. Qua bài viết trên, tin chắc rằng bạn đã có câu trả lời cho câu hỏi “Học thiết kế web ra
+                    làm gì” từ đó giúp bạn tìm ra hướng đi phù hợp nhất cho bản thân - những nhà thiết kế website tương
+                    lai.</p>
+            </div>
+            <div class="sidebar">
+                <h1 style="font-size: 20px; border-bottom: 1px solid blue; padding: 10px;">Có lẽ bạn sẽ quan tâm
+                </h1>
+                <a href="#">
+                    <img src="https://st.quantrimang.com/photos/image/2020/12/01/Viettel-nhan-data-5G-200-size-80x80-znd.jpg"
+                        alt="">
+                    <p>Cách nhận data 5G Viettel miễn phí, không giới hạn</p>
+                </a>
+                <a href="#">
+                    <img src="https://st.quantrimang.com/photos/image/2020/08/24/Zalo-tat-thong-bao-moi-truy-cap-200-size-80x80-znd.jpg"
+                        alt="">
+                    <p>Tắt trạng thái online Zalo như thế nào</p>
+                </a>
+                <a href="#">
+                    <img src="https://st.quantrimang.com/photos/image/2020/11/27/thuat-ngu-dien-toan-dam-may-200-size-80x80-znd.jpg"
+                        width="80px" height="80px" alt="">
+                    <p>Danh sách thuật ngữ viết tắt thông dụng về điện toán đám mây</p>
+                </a>
+                <a href="#">
+                    <img src="https://st.quantrimang.com/photos/image/2020/11/27/chuyen-doi-so-200-size-80x80-znd.jpg"
+                        alt="">
+                    <p>Điện toán đám mây và câu chuyện chuyển đổi số</p>
+                </a>
+            </div>
+
+        </div>
+
+        <div class="comment">
+            <h1>Ý kiến <span style="display: none;" id="comment-login-remind"> (Đăng nhập để bình luận)</span></h1>
+            <form id="comment-form">
+                <input autocomplete="off" type="text" id="comment-box" placeholder="Ý kiến của bạn" maxlength="1000"
+                    required><br>
+                <button id="send">Gửi</button>
+            </form>
+
+        </div>
+        <h1 id="number-comment">0 bình luận</h1>
+        <div id="comment-list"></div>
+
+        <div class="body">
+            <h1 style="font-size: 20px; border-bottom: 1px solid blue; padding: 10px; width: 95%;">Bài viết nổi bật
+            </h1>
+            <div style="display: flex; flex-wrap: wrap;">
+                <a href="#" style="width:30%; margin: 5px;">
+                    <img src="https://st.quantrimang.com/photos/image/2020/12/19/chon-micro-mac-dinh-200.jpg"
+                        width="100%" height="auto" alt="">
+                    <p style="margin: 0;"> Cách chọn micro mặc định trên Windows 10</p>
+                </a>
+                <a href="#" style="width:30%; margin: 5px;">
+                    <img src="https://st.quantrimang.com/photos/image/2020/12/19/airpods-200.jpg" width="100%"
+                        height="auto" alt="">
+                    <p style="margin: 0;">Cách kết nối và sử dụng airpods</p>
+                </a>
+                <a href="#" style="width:30%; margin: 5px;">
+                    <img src="https://st.quantrimang.com/photos/image/2020/12/19/ly-do-khong-nen-mua-wifi-repeater-200.jpg"
+                        width="100%" height="auto" alt="">
+                    <p style="margin: 0;"> 5 lý do không nên mua wifi repeater</p>
+                </a>
+                <a href="#" style="width:30%; margin: 5px;">
+                    <img src="https://st.quantrimang.com/photos/image/2020/12/19/den-luot-microsoft-thua-nhan-bi-hack-vi-lo-hong-solarwinds-200.jpg"
+                        width="100%" height="auto" alt="">
+                    <p style="margin: 0;"> Đến lượt Microsoft thừa nhận bị hack vì lỗ hổng SolarWinds
+                    </p>
+                </a>
+                <a href="#" style="width:30%; margin: 5px;">
+                    <img src="https://st.quantrimang.com/photos/image/2020/12/15/cong-wan-va-cong-lan-200.jpg"
+                        width="100%" height="auto" alt="">
+                    <p style="margin: 0;">  Sự khác biệt giữa cổng WAN và cổng LAN </p>
+                </a>
+                <a href="#" style="width:30%; margin: 5px;">
+                    <img src="https://st.quantrimang.com/photos/image/2020/12/18/gia-cuoc-5g-200.jpg"
+                        width="100%" height="auto" alt="">
+                    <p style="margin: 0;"> Giá cước mạng 5G dự kiến ngang 4G </p>
+                </a>
+            </div>
+        </div>
+
+        <div class="footer">
+            <a href="index.html">
+                <img src="https://i.imgur.com/H16xz30.png" height="40px" width="auto" alt=""></a>
+            <p style="font-size: 12px;">© 2020. Toàn bộ bản quyền thuộc Nguyễn Anh Phong <br>
+                Báo công nghệ nhiều người xem nhất. Thuộc MindX Coding School.
+            </p>
+            <p>Theo dõi Tech-guide tại</p>
+            <div>
+
+                <a href="https://www.facebook.com/profile.php?id=100054125401462">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Facebook-icon-1.png/768px-Facebook-icon-1.png"
+                        width="30px" height="30px" alt="">
+                </a>
+                <a href="https://twitter.com/">
+                    <img src="https://icons-for-free.com/iconfiles/png/512/app+global+ios+media+social+tweeter+icon-1320193330528303033.png"
+                        width="30px" height="30px" alt="">
+                </a>
+                <a href="https://www.youtube.com/channel/UCKEDezt9ebgc8ChTHGpZMjg?view_as=subscriber">
+                    <img src="https://seeklogo.net/wp-content/uploads/2020/03/YouTube-icon-SVG-512x512.png" width="30px"
+                        height="30px" alt="">
+                </a>
+            </div>
+
+        </div>
+    </div>
+    <div style="padding: 5px;" id="top-up"><img width="30px" height="30px" src="https://i.imgur.com/XfE86gl.png" alt="">
+    </div>
+    <div class="login-screen" id="login-screen">
+        <form class="login-form animate" id="login-form">
+            <h1 style="text-align: center; margin-bottom: 20px;">Đăng nhập</h1>
+            <label for="username"><b>Tên đăng nhập</b></label><br>
+            <input autocomplete="off" type="text" placeholder="Điền tên đăng nhập" id="username" required><br>
+            <p id="error-username">Tên đăng nhập gồm 8-20 kí tự</p>
+            <label for="email"><b>Email</b></label><br>
+            <input autocomplete="off" type="text" placeholder="Điền email" id="email" required>
+            <p id="error-email">Email phải bao gồm "@" và "."</p>
+            <br>
+            <button id="login-submit">Đăng nhập</button>
+            <div style="display: flex; justify-content: center;">
+                <img class="rotate" id="loading-icon-login" style="display:none" src="https://i.imgur.com/qg5SWOk.png"
+                    height="40px" width="40px" alt="">
+            </div>
+
+        </form>
+    </div>
+    <div class="logout-screen" id="logout-screen">
+        <div class="logout-form animate">
+            <h1 style="text-align: center; margin-bottom: 20px;">Thông tin tài khoản</h1>
+            <b>Tên đăng nhập: </b>
+            <p id="username-logout"></p>
+            <b>Email: </b>
+            <p id="email-logout"></p>
+            <button id="logout-submit" onclick="logout()">Đăng xuất</button>
+            <div style="display: flex; justify-content: center;">
+                <img class="rotate" id="loading-icon-logout" style="display:none" src="https://i.imgur.com/qg5SWOk.png"
+                    height="40px" width="40px" alt="">
+            </div>
+        </div>
+    </div>
+    <script src="./js/app.js"></script>
+    <script src="./js/search.js"></script>
+    <script src="./js/account.js"></script>
+    <script src="./js/comment.js"></script>
+    <script src="./js/onload.js"></script>
+</body>
+
+</html>
