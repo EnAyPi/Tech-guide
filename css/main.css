@@ -76,36 +76,13 @@
 
 .more h1 {
     color: black;
+    width: 95%;
 }
 
 .more p {
     font-size: 17px;
     color: black;
-}
-
-#more2 {
-    display: none;
-    width: 100%;
-}
-
-#more3 {
-    display: none;
-    width: 100%;
-}
-
-#more4 {
-    display: none;
-    width: 100%;
-}
-
-#more5 {
-    display: none;
-    width: 100%;
-}
-
-#more6 {
-    display: none;
-    width: 100%;
+    width: 95%;
 }
 
 #watch-more {

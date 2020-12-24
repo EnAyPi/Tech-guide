@@ -60,12 +60,17 @@ function nav_responsive() {
         document.getElementById("nav-res").style.display = "flex";
         document.getElementById("nav-res").style.position = "fixed";
         document.getElementById("nav-res").style.top = "0px";
+        document.getElementsByClassName("body")[0].style.transform = "translateY(360px)";
+        document.getElementsByClassName("body")[0].style.transition = "transform 0.3s";
+        document.getElementsByClassName("footer")[0].style.transform = "translateY(360px)";
+        document.getElementsByClassName("footer")[0].style.transition = "transform 0.3s";
         document.getElementById("nav-res-border").style.transform = "scaleY(1)";
         document.getElementById("nav-res-border").style.transition = "transform 0.3s";
         count_nav++;
     } else {
         document.getElementById("nav-res-border").style.transform = "scaleY(0.1)"
-        document.getElementById("nav-res-border").style.transition = "transform 0.3s"
+        document.getElementsByClassName("body")[0].style.transform = "translateY(0)";
+        document.getElementsByClassName("footer")[0].style.transform = "translateY(0)";
         setTimeout(() => {
             document.getElementById("nav-res").style.display = "none";
         }, 300);
