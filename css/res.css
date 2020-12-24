@@ -2,9 +2,6 @@
     h1 {
         font-size: 20px;
     }
-    .first-img p{
-        font-size: 23px;
-    }
     .everything {
         width: 100%;
         background-color: white;
@@ -54,6 +51,7 @@
         position: static;
         background: transparent;
         color: black;
+        font-size: 23px;
     }
     .more p {
         display: none;
