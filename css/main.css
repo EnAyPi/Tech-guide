@@ -11,6 +11,7 @@
 .body {
     width: 60%;
     margin: 50px 0 0 50px;
+    min-height: 700px;
 }
 
 .first-img p {
