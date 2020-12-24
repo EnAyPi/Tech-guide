@@ -66,11 +66,13 @@ function nav_responsive() {
         document.getElementsByClassName("footer")[0].style.transition = "transform 0.3s";
         document.getElementById("nav-res-border").style.transform = "scaleY(1)";
         document.getElementById("nav-res-border").style.transition = "transform 0.3s";
+        document.getElementById("navbar-toggler").innerHTML = "<i style=\"font-size: 25px;\" class=\"fas fa-times\"></i>"
         count_nav++;
     } else {
         document.getElementById("nav-res-border").style.transform = "scaleY(0.1)"
         document.getElementsByClassName("body")[0].style.transform = "translateY(0)";
         document.getElementsByClassName("footer")[0].style.transform = "translateY(0)";
+        document.getElementById("navbar-toggler").innerHTML = "<i style=\"font-size: 25px;\" class=\"fas fa-align-justify\"></i>"
         setTimeout(() => {
             document.getElementById("nav-res").style.display = "none";
         }, 300);
