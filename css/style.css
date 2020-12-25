@@ -63,7 +63,7 @@ h1 {
 }
 
 .animate {
-    animation: animatezoom 0.3s
+    animation: animatezoom 0.3s;
 }
 
 @keyframes rotate {

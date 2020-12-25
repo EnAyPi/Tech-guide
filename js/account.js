@@ -1,7 +1,6 @@
 function login() {
     if (localStorage.getItem("username") != undefined) {
-        document.getElementById("logout-screen").style.display = "block"
-
+        document.getElementById("logout-screen").style.display = "block";
     } else {
         document.getElementById("login-screen").style.display = "block";
     }
