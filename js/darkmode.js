@@ -90,7 +90,8 @@ function darkmode_switch() {
         document.getElementById("logout-screen").style.backgroundColor = "rbga(0,0,0,0.4)";
         document.getElementById("login-form").style.backgroundColor = "white";
         document.getElementById("logout-form").style.backgroundColor = "white";
-        document.getElementById("watch-more").style.color = "white";
+        document.getElementById("watch-more").style.backgroundColor = "white";
+        document.getElementById("watch-more").style.color = "black";
     }
 
 }
