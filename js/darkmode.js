@@ -10,6 +10,7 @@ function darkmode_switch() {
     let i_icon = document.getElementsByTagName("i");
     let label = document.getElementsByTagName("label");
     let b = document.getElementsByTagName("b");
+    let h2 = document.getElementsByTagName("h2");
 
     if (document.getElementById("darkmode").checked) {
         localStorage.setItem("darkmode","true");
@@ -36,6 +37,9 @@ function darkmode_switch() {
         }
         for (let i = 0; i < b.length; i++) {
             b[i].style.color = "white";
+        }
+        for (let i = 0; i < h2.length; i++) {
+            h2[i].style.color = "white";
         }
         for (let i = 0; i < list.length; i++) {
             list[i].style.borderTop = "3px solid white";
@@ -74,6 +78,9 @@ function darkmode_switch() {
         }
         for (let i = 0; i < b.length; i++) {
             b[i].style.color = "";
+        }
+        for (let i = 0; i < h2.length; i++) {
+            h2[i].style.color = "";
         }
         for (let i = 0; i < list.length; i++) {
             list[i].style.borderTop = "3px solid blue";
