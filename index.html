@@ -11,17 +11,18 @@
     <link rel="stylesheet" href="css/nav.css">
     <link rel="stylesheet" href="css/search.css">
     <link rel="stylesheet" href="css/comment.css">
+    <link rel="stylesheet" href="css/darkmode.css">
     <link rel="stylesheet" href="css/res.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" />
     <link rel="shortcut icon" href="https://i.imgur.com/pKYZGix.png" type="image/x-icon">
 </head>
 
-<body onload="onloadmainindex(); onloadlogin();">
+<body onload="onloadmainindex(); onloadlogin(); darkmode_onload();">
     <div class="everything">
         <div class="nav-mini">
             <div class="logo">
-                <a href="index.html"><img src="https://i.imgur.com/H16xz30.png" alt="" height="50px" width="auto">
+                <a href="index.html"><img src="https://i.imgur.com/H16xz30.png" alt="" height="40px" width="auto">
                     <p style="font-size: 12px;">Thủ thuật công nghệ và phần mềm</p>
                 </a>
             </div>
@@ -144,8 +145,7 @@
 
 
             <div id="dropdown">
-                <a href="search.html" class="dropbtn" id="search-icon"
-                    style="height: 50px; width: auto; display: flex; align-items: center;">
+                <a href="search.html" class="dropbtn" id="search-icon" style="padding: 30px 0;">
                     <i style="font-size: 25px;" class="fas fa-search"></i>
                 </a>
 
@@ -171,7 +171,7 @@
                     </div>
                     <div style="display: flex; align-items: center; cursor: pointer;">
                         <input type="text" id="search2" placeholder="Tìm kiếm" autocomplete="off">
-                        <a href="search.html">
+                        <a style="border: none;" href="search.html">
                             <i style="font-size: 25px; margin-left: 10px;" class="fas fa-search"></i>
                         </a>
                     </div>
@@ -618,7 +618,7 @@
         </form>
     </div>
     <div class="logout-screen" id="logout-screen">
-        <div class="logout-form animate">
+        <div class="logout-form animate" id="logout-form">
             <h1 style="text-align: center; margin-bottom: 20px;">Thông tin tài khoản</h1>
             <b>Tên đăng nhập: </b>
             <p id="username-logout"></p>
@@ -631,9 +631,14 @@
             </div>
         </div>
     </div>
+    <label id="darkmode-label" for="darkmode">
+        <input type="checkbox" id="darkmode">
+        <div id="slider"></div>
+    </label>
     <script src="./js/app.js"></script>
     <script src="./js/search.js"></script>
     <script src="./js/account.js"></script>
+    <script src="./js/darkmode.js"></script>
     <script src="./js/onload.js"></script>
 </body>
 

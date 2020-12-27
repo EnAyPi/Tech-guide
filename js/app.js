@@ -50,7 +50,11 @@ $(window).scroll(function () {
 
     } else {
         document.getElementById("icon").style.width = "30px";
-        document.getElementById("icon").src = "https://i.imgur.com/EZknHz3.png";
+        if (document.getElementById("darkmode").checked) {
+            document.getElementById("icon").src = "https://i.imgur.com/Teyt1oJ.png";
+        } else {
+            document.getElementById("icon").src = "https://i.imgur.com/EZknHz3.png";
+        }
     }
 });
 
@@ -60,9 +64,9 @@ function nav_responsive() {
         document.getElementById("nav-res").style.display = "flex";
         document.getElementById("nav-res").style.position = "fixed";
         document.getElementById("nav-res").style.top = "0px";
-        document.getElementsByClassName("body")[0].style.transform = "translateY(360px)";
+        document.getElementsByClassName("body")[0].style.transform = "translateY(370px)";
         document.getElementsByClassName("body")[0].style.transition = "transform 0.3s";
-        document.getElementsByClassName("footer")[0].style.transform = "translateY(360px)";
+        document.getElementsByClassName("footer")[0].style.transform = "translateY(370px)";
         document.getElementsByClassName("footer")[0].style.transition = "transform 0.3s";
         document.getElementById("nav-res-border").style.transform = "scaleY(1)";
         document.getElementById("nav-res-border").style.transition = "transform 0.3s";

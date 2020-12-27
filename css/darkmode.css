@@ -1,0 +1,44 @@
+#darkmode-label{
+    position: fixed;
+    bottom: 30px;
+    left: 20px;
+}
+
+#darkmode {
+    display: none;
+}
+
+#slider {
+    cursor: pointer;
+    width: 53px;
+    height: 27px;
+    border: 2px solid yellow;
+    border-radius: 50px;
+    background-color: white;
+    position: relative;
+    transition: 0.3s;
+}
+
+#slider::before {
+    height: 20px;
+    width: 20px;
+    background-color: yellow;
+    border: none;
+    border-radius: 50px;
+    position: absolute;
+    left: 3px;
+    top: 1px;
+    content: "";
+    transition: 0.3s;
+}
+
+#darkmode:checked+#slider {
+    border: 2px solid #151935;
+}
+
+#darkmode:checked+#slider::before {
+    transform: translateX(16px);
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: 7px 0 0 0 #151935;
+}

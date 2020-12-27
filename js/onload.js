@@ -23,8 +23,6 @@ function onloadmainindex() {
 
         setTimeout(() => {
             count_more_2 = count_more + 2;
-
-            console.log("count_more_2: " + count_more_2);
             for (count_more = 0; count_more <= count_more_2; count_more++) {
                 if (more[count_more] != undefined) {
                     more[count_more].style.display = "flex";
@@ -54,4 +52,11 @@ function onloadcomment() {
         document.getElementById("comment-list").innerHTML += output;
     }
     document.getElementById("number-comment").innerHTML = Number(localStorage.getItem(document.getElementsByTagName("title")[0].innerText + " - number_comment")) + " bình luận";
+}
+
+function darkmode_onload(){
+    if(localStorage.getItem("darkmode") != undefined){
+        document.getElementById("darkmode").checked = true;
+        darkmode_switch();
+    }
 }

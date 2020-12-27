@@ -1,3 +1,11 @@
+.logo {
+    margin-left: 100px;
+}
+
+.logo p {
+    margin: 0 0 0 50px;
+}
+
 .nav-box {
     display: flex;
     width: auto;
