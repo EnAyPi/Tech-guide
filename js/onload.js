@@ -48,7 +48,7 @@ function onloadcomment() {
         let comment_box = localStorage.getItem(document.getElementsByTagName("title")[0].innerText + " - comment_content" + i);
         let fullname = localStorage.getItem(document.getElementsByTagName("title")[0].innerText + " - comment_user" + i);
         let lettericon = fullname[0].toUpperCase();
-        let output = "<div class=\"comment-list\"><h1>" + lettericon + "</h1><p style=\"color: #04416D; margin-right: 10px;\">" + fullname + "</p><p>" + comment_box + "</p></div>";
+        let output = "<div class=\"comment-list\"><h1>" + lettericon + "</h1><b style=\"margin-right: 10px;\">" + fullname + "</b><p>" + comment_box + "</p></div>";
         document.getElementById("comment-list").innerHTML += output;
     }
     document.getElementById("number-comment").innerHTML = Number(localStorage.getItem(document.getElementsByTagName("title")[0].innerText + " - number_comment")) + " bình luận";

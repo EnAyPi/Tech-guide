@@ -11,10 +11,12 @@
     outline: none;
     border: 1px solid lightgray;
 }
-.comment input:focus{
+
+.comment input:focus {
     border: 1px solid blue;
     transition: 0.5s;
 }
+
 #send {
     color: white;
     margin: 10px 10px 10px 0;
@@ -39,6 +41,7 @@
 }
 
 .comment-list {
+    flex-wrap: wrap;
     display: flex;
     align-items: center;
     margin-left: 50px;
@@ -47,8 +50,14 @@
     border-bottom: 1px solid lightgray;
 }
 
+.comment-list p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
 #number-comment {
-    margin: 50px 0 0 50px;
+    margin: 0 0 0 50px;
     width: 60%;
     border-bottom: 1px solid lightgray;
     padding: 20px 0;

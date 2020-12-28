@@ -13,7 +13,7 @@ function darkmode_switch() {
     let h2 = document.getElementsByTagName("h2");
 
     if (document.getElementById("darkmode").checked) {
-        localStorage.setItem("darkmode","true");
+        localStorage.setItem("darkmode", "true");
         for (let i = 0; i < div.length; i++) {
             div[i].style.backgroundColor = "#1c1720";
         }
@@ -51,8 +51,12 @@ function darkmode_switch() {
         document.getElementById("logout-form").style.backgroundColor = "#1c1720";
         document.getElementById("slider").style.backgroundColor = "white";
         document.getElementById("top-up").style.backgroundColor = "white";
-        document.getElementById("watch-more").style.backgroundColor = "#1c1720";
-        document.getElementById("watch-more").style.color = "white";
+
+        if (document.getElementById("watch-more") != null) {
+            document.getElementById("watch-more").style.backgroundColor = "#1c1720";
+            document.getElementById("watch-more").style.color = "white";
+        }
+
     } else {
         localStorage.removeItem("darkmode")
         for (let i = 0; i < div.length; i++) {
@@ -90,8 +94,10 @@ function darkmode_switch() {
         document.getElementById("logout-screen").style.backgroundColor = "rbga(0,0,0,0.4)";
         document.getElementById("login-form").style.backgroundColor = "white";
         document.getElementById("logout-form").style.backgroundColor = "white";
-        document.getElementById("watch-more").style.backgroundColor = "white";
-        document.getElementById("watch-more").style.color = "black";
+        if (document.getElementById("watch-more") != null) {
+            document.getElementById("watch-more").style.backgroundColor = "white";
+            document.getElementById("watch-more").style.color = "black";
+        }
     }
 
 }
