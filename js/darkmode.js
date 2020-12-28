@@ -105,5 +105,4 @@ function darkmode_switch() {
             document.getElementById("icon").src = "https://i.imgur.com/EZknHz3.png";
         }
     }
-
 }
