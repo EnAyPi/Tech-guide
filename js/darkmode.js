@@ -57,6 +57,9 @@ function darkmode_switch() {
             document.getElementById("watch-more").style.color = "white";
         }
 
+        if(document.getElementById("icon").src != "https://i.imgur.com/H16xz30.png"){
+            document.getElementById("icon").src = "https://i.imgur.com/Teyt1oJ.png";
+        }
     } else {
         localStorage.removeItem("darkmode")
         for (let i = 0; i < div.length; i++) {
@@ -97,6 +100,9 @@ function darkmode_switch() {
         if (document.getElementById("watch-more") != null) {
             document.getElementById("watch-more").style.backgroundColor = "white";
             document.getElementById("watch-more").style.color = "black";
+        }
+        if(document.getElementById("icon").src != "https://i.imgur.com/H16xz30.png"){
+            document.getElementById("icon").src = "https://i.imgur.com/EZknHz3.png";
         }
     }
 
