@@ -22,6 +22,14 @@ p {
     text-align: justify;
 }
 
+li{
+    margin: 20px 0;
+}
+
+h2{
+    margin: 20px 0;
+}
+
 a {
     text-decoration: none;
     color: black;
