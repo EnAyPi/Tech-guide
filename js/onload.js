@@ -42,7 +42,9 @@ function onloadmainindex() {
 function onloadcomment() {
     if (localStorage.getItem("username") == undefined) {
         document.getElementById("comment-login-remind").style.display = "inline";
-        document.getElementById("comment-form").addEventListener("click", login);
+        document.getElementById("comment-box").disabled = "disabled";
+        document.getElementById("send").disabled = "disabled";
+        document.getElementsByClassName("comment")[0].addEventListener("click", login);
     }
     for (let i = 1; i <= Number(localStorage.getItem(document.getElementsByTagName("title")[0].innerText + " - number_comment")); i++) {
         let comment_box = localStorage.getItem(document.getElementsByTagName("title")[0].innerText + " - comment_content" + i);
