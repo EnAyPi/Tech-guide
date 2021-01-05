@@ -48,9 +48,6 @@
         padding: 0;
     }
     .first-img p {
-        position: static;
-        background: transparent;
-        color: black;
         font-size: 23px;
     }
     .more p {

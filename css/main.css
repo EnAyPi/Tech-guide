@@ -14,16 +14,20 @@
     margin: 50px 0 0 50px;
 }
 
-.first-img p {
+.first-img{
     position: relative;
-    bottom: 42px;
+}
+
+.first-img p {
+    position: absolute;
+    bottom: 0;
     width: 100%;
     text-align: center;
     font-size: 25px;
     color: white;
     background: rgba(0, 0, 0, 0.6);
     margin: 0;
-    padding: 5px;
+    padding: 10px;
 }
 
 .heading {
