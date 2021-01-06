@@ -104,6 +104,15 @@
     transition: 0.3s;
 }
 
+.image-container{
+    display: flex;
+    justify-content: space-around;
+}
+
+.image-container img{
+    max-width: 100%;
+}
+
 #watch-more {
     background-color: white;
     padding: 10px;
