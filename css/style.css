@@ -22,11 +22,11 @@ p {
     text-align: justify;
 }
 
-li{
+li {
     margin: 20px 0;
 }
 
-h2{
+h2 {
     margin: 20px 0;
 }
 
@@ -39,10 +39,12 @@ a:hover h1 {
     color: blue;
     transition: color 0.3s;
 }
-a:hover{
+
+a:hover {
     color: blue;
     transition: color 0.3s;
 }
+
 h1 {
     font-size: 25px;
     text-align: justify;
@@ -83,6 +85,6 @@ h1 {
     }
 }
 
-.rotate{
+.rotate {
     animation: rotate 0.5s linear;
 }
