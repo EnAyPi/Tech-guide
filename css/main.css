@@ -75,6 +75,11 @@
     font-size: 17px;
 }
 
+.sidebar a:hover img{
+    transform: scale(1.05);
+    transition: 0.3s;
+}
+
 .more {
     display: flex;
     justify-content: space-around;
@@ -92,6 +97,11 @@
     font-size: 17px;
     color: black;
     width: 95%;
+}
+
+.more:hover img{
+    transform: scale(1.05);
+    transition: 0.3s;
 }
 
 #watch-more {
