@@ -73,6 +73,37 @@
 #open-nav {
     cursor: pointer;
     display: none;
+    height: 20px;
+    position: relative;
+    top: 5px;
+}
+
+#toggle-icon-1 {
+    height: 4px;
+    width: 20px;
+    background-color: black;
+    border-radius: 70px;
+    transition: 0.5s;
+    position: absolute;
+    top: -8px;
+}
+
+#toggle-icon-2 {
+    height: 4px;
+    width: 20px;
+    background-color: black;
+    border-radius: 70px;
+    transition: 0.5s;
+}
+
+#toggle-icon-3 {
+    height: 4px;
+    width: 20px;
+    background-color: black;
+    border-radius: 70px;
+    transition: 0.5s;
+    position: absolute;
+    top: 8px;
 }
 
 .drop {
