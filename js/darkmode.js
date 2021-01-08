@@ -51,6 +51,14 @@ function darkmode_switch() {
         document.getElementById("logout-form").style.backgroundColor = "#1c1720";
         document.getElementById("slider").style.backgroundColor = "white";
         document.getElementById("top-up").style.backgroundColor = "white";
+        document.getElementById("toggle-icon-1").style.backgroundColor = "white";
+        document.getElementById("toggle-icon-3").style.backgroundColor = "white";
+
+        if(count_nav_toggle % 2 == 0){
+            document.getElementById("toggle-icon-2").style.backgroundColor = "white";
+        }else{
+            document.getElementById("toggle-icon-2").style.backgroundColor = "black";
+        }
 
         if (document.getElementById("watch-more") != null) {
             document.getElementById("watch-more").style.backgroundColor = "#1c1720";
@@ -97,6 +105,16 @@ function darkmode_switch() {
         document.getElementById("logout-screen").style.backgroundColor = "rbga(0,0,0,0.4)";
         document.getElementById("login-form").style.backgroundColor = "white";
         document.getElementById("logout-form").style.backgroundColor = "white";
+
+        document.getElementById("toggle-icon-1").style.backgroundColor = "black";
+        document.getElementById("toggle-icon-3").style.backgroundColor = "black";
+
+        if(count_nav_toggle % 2 == 0){
+            document.getElementById("toggle-icon-2").style.backgroundColor = "black";
+        }else{
+            document.getElementById("toggle-icon-2").style.backgroundColor = "white";
+        }
+
         if (document.getElementById("watch-more") != null) {
             document.getElementById("watch-more").style.backgroundColor = "white";
             document.getElementById("watch-more").style.color = "black";

@@ -72,16 +72,24 @@ document.getElementById("open-nav").addEventListener("click", function () {
     if (count_nav_toggle % 2 == 0) {
         toggle_icon_1.style.transform = "rotate(45deg)";
         toggle_icon_1.style.top = "0";
-        toggle_icon_2.style.backgroundColor = "white";
         toggle_icon_3.style.transform = "rotate(-45deg)";
         toggle_icon_3.style.top = "0";
+        if (localStorage.getItem("darkmode") != undefined) {
+            toggle_icon_2.style.backgroundColor = "black";
+        } else {
+            toggle_icon_2.style.backgroundColor = "white";
+        }
         count_nav_toggle++;
     } else {
         toggle_icon_1.style.transform = "";
         toggle_icon_1.style.top = "-8px";
-        toggle_icon_2.style.backgroundColor = "black";
         toggle_icon_3.style.transform = "";
         toggle_icon_3.style.top = "8px";
+        if (localStorage.getItem("darkmode") != undefined) {
+            toggle_icon_2.style.backgroundColor = "white";
+        } else {
+            toggle_icon_2.style.backgroundColor = "black";
+        }
         count_nav_toggle++;
     }
 });
