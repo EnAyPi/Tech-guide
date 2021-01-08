@@ -53,7 +53,7 @@
 }
 
 #nav-res {
-    display: none;
+    display: flex;
     flex-direction: column;
     justify-content: space-around;
     width: 100%;
@@ -67,7 +67,7 @@
 }
 
 #nav-res-border {
-    transform: scaleY(0.1);
+    display: none;
 }
 
 #open-nav {

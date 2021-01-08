@@ -58,49 +58,8 @@ $(window).scroll(function () {
     }
 });
 
-let count_nav = 1;
-function nav_responsive() {
-    if (count_nav % 2 == 1) {
-        document.getElementById("nav-res").style.display = "flex";
-        document.getElementById("nav-res").style.position = "fixed";
-        document.getElementById("nav-res").style.top = "0px";
-        document.getElementsByClassName("body")[0].style.transform = "translateY(370px)";
-        document.getElementsByClassName("body")[0].style.transition = "transform 0.3s";
-        document.getElementsByClassName("footer")[0].style.transform = "translateY(370px)";
-        document.getElementsByClassName("footer")[0].style.transition = "transform 0.3s";
-        document.getElementById("nav-res-border").style.transform = "scaleY(1)";
-        document.getElementById("nav-res-border").style.transition = "transform 0.3s";
-        document.getElementById("navbar-toggler").innerHTML = "<i style=\"font-size: 25px;\" class=\"fas fa-times\"></i>"
-        let i_icon = document.getElementsByTagName("i");
-        if (document.getElementById("darkmode").checked) {
-            for (let i = 0; i < i_icon.length; i++) {
-                i_icon[i].style.color = "white";
-            }
-        }else{
-            for (let i = 0; i < i_icon.length; i++) {
-                i_icon[i].style.color = "";
-            }
-        }
-        count_nav++;
-    } else {
-        document.getElementById("nav-res-border").style.transform = "scaleY(0.1)"
-        document.getElementsByClassName("body")[0].style.transform = "translateY(0)";
-        document.getElementsByClassName("footer")[0].style.transform = "translateY(0)";
-        document.getElementById("navbar-toggler").innerHTML = "<i style=\"font-size: 25px;\" class=\"fas fa-align-justify\"></i>"
-        let i_icon = document.getElementsByTagName("i");
-        if (document.getElementById("darkmode").checked) {
-            for (let i = 0; i < i_icon.length; i++) {
-                i_icon[i].style.color = "white";
-            }
-        }else{
-            for (let i = 0; i < i_icon.length; i++) {
-                i_icon[i].style.color = "";
-            }
-        }
-        setTimeout(() => {
-            document.getElementById("nav-res").style.display = "none";
-        }, 300);
-
-        count_nav++;
-    }
-}
+$(document).ready(function () {
+    $("#open-nav").click(function () {
+        $("#nav-res-border").slideToggle("medium");
+    });
+});
