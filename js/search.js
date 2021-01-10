@@ -21,7 +21,7 @@ function filterFunction() {
 }
 document.getElementById("searchInput").addEventListener("keyup", function (event) {
     event.preventDefault();
-    if (document.getElementById("searchInput").value != "") {
+    if (document.getElementById("searchInput").value.trim() != "") {
         sessionStorage.setItem("search", document.getElementById("searchInput").value);
         if (event.keyCode === 13) {
             document.getElementById("search-icon").click();
@@ -32,7 +32,7 @@ document.getElementById("searchInput").addEventListener("keyup", function (event
 
 document.getElementById("search2").addEventListener("keyup", function (event) {
     event.preventDefault();
-    if (document.getElementById("search2").value != "") {
+    if (document.getElementById("search2").value.trim() != "") {
         sessionStorage.setItem("search", document.getElementById("search2").value);
         if (event.keyCode === 13) {
             document.getElementById("search-icon").click();
@@ -42,13 +42,13 @@ document.getElementById("search2").addEventListener("keyup", function (event) {
 });
 
 function tosearch() {
-    if (document.getElementById("searchInput").value != "") {
+    if (document.getElementById("searchInput").value.trim() != "") {
         sessionStorage.setItem("search", document.getElementById("searchInput").value);
         document.getElementById("search-icon").click();
     }
 }
 function tosearch2() {
-    if (document.getElementById("search2").value != "") {
+    if (document.getElementById("search2").value.trim() != "") {
         sessionStorage.setItem("search", document.getElementById("search2").value);
         document.getElementById("search-icon").click();
     }
