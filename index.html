@@ -144,10 +144,8 @@
 
 
             <div id="dropdown">
-                <a href="search.html" class="dropbtn" id="search-icon" style="padding: 20px 0;">
-                    <i style="font-size: 25px;" class="fas fa-search"></i>
-                </a>
-
+                <i onclick="tosearch()" style="font-size: 25px; padding: 20px 0;" class="fas fa-search"></i>
+                <a id="search-icon" style="display: none;" href="search.html"></a>
                 <div id="myDropdown" class="dropdown-content animate">
                     <input autocomplete="off" type="text" placeholder="Search..." id="searchInput">
                 </div>
@@ -172,9 +170,7 @@
                     </div>
                     <div style="display: flex; align-items: center; cursor: pointer;">
                         <input type="text" id="search2" placeholder="Tìm kiếm" autocomplete="off">
-                        <a style="border: none;" href="search.html">
-                            <i style="font-size: 25px; margin-left: 10px;" class="fas fa-search"></i>
-                        </a>
+                        <i onclick="tosearch2()" style="font-size: 25px; margin-left: 5px;" class="fas fa-search"></i>
                     </div>
 
                 </div>
