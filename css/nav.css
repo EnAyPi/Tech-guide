@@ -109,6 +109,7 @@
 .drop {
     width: 90px;
     text-align: center;
+    position: relative;
 }
 
 .list {
@@ -129,10 +130,6 @@
     padding: 10px 0 10px 5px;
     background-color: white;
     margin: 0;
-}
-
-.drop:hover {
-    position: relative;
 }
 
 .drop:hover .list {
