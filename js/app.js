@@ -93,3 +93,18 @@ document.getElementById("open-nav").addEventListener("click", function () {
         count_nav_toggle++;
     }
 });
+
+function scroll_function(){
+    let more = document.getElementsByClassName("more");
+    for (let i = 0; i < more.length; i++) {
+        if (more[i].getBoundingClientRect().top < innerHeight) {
+            more[i].classList.add("more-load");
+        }else{
+            more[i].classList.remove("more-load");
+        }
+    }
+}
+
+window.addEventListener("load", scroll_function);
+
+window.addEventListener("scroll", scroll_function);

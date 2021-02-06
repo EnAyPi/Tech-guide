@@ -86,6 +86,14 @@
     width: 100%;
     padding: 30px 0;
     border-top: 1px solid lightgray;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: 0.5s;
+}
+
+.more-load{
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .more h1 {
