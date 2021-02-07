@@ -54,6 +54,7 @@ function darkmode_switch() {
         document.getElementById("toggle-icon-1").style.backgroundColor = "white";
         document.getElementById("toggle-icon-3").style.backgroundColor = "white";
         document.getElementsByTagName("body")[0].style.backgroundColor = "#19151d";
+        document.getElementsByClassName("everything")[0].style.border = "thin solid white"
 
         if(count_nav_toggle % 2 == 0){
             document.getElementById("toggle-icon-2").style.backgroundColor = "white";
@@ -109,6 +110,9 @@ function darkmode_switch() {
 
         document.getElementById("toggle-icon-1").style.backgroundColor = "black";
         document.getElementById("toggle-icon-3").style.backgroundColor = "black";
+        document.getElementsByTagName("body")[0].style.backgroundColor = "";
+        document.getElementsByClassName("everything")[0].style.border = ""
+
 
         if(count_nav_toggle % 2 == 0){
             document.getElementById("toggle-icon-2").style.backgroundColor = "black";
