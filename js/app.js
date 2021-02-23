@@ -105,6 +105,6 @@ function scroll_function(){
     }
 }
 
-window.addEventListener("load", scroll_function);
+scroll_function();
 
 window.addEventListener("scroll", scroll_function);
