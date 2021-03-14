@@ -4,21 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tech-guide - Search</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/account.css">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/nav.css">
-    <link rel="stylesheet" href="css/search.css">
-    <link rel="stylesheet" href="css/comment.css">
-    <link rel="stylesheet" href="css/darkmode.css">
-    <link rel="stylesheet" href="css/res.css">
+    <title>Tech-guide</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/account.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/nav.css">
+    <link rel="stylesheet" href="../css/search.css">
+    <link rel="stylesheet" href="../css/comment.css">
+    <link rel="stylesheet" href="../css/darkmode.css">
+    <link rel="stylesheet" href="../css/res.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/../css/all.css" />
     <link rel="shortcut icon" href="https://i.imgur.com/pKYZGix.png" type="image/x-icon">
 </head>
 
-<body onload="filterFunction(); onloadlogin(); darkmode_onload();">
+<body onload="onloadmainindex(); onloadlogin(); darkmode_onload();">
     <div class="everything">
         <div class="nav-mini">
             <div class="logo">
@@ -146,7 +146,6 @@
             <div id="dropdown">
                 <i onclick="tosearch()" style="font-size: 25px; padding: 12px 0;" class="fas fa-search"></i>
                 <a id="search-icon" style="display: none;" href="search.html"></a>
-
                 <div id="myDropdown" class="dropdown-content animate">
                     <input autocomplete="off" type="text" placeholder="Search..." id="searchInput">
                 </div>
@@ -180,23 +179,15 @@
 
         <div class="main">
 
-            <div class="body" style="min-height: 700px;">
-                <p style="font-size: 30px;">Kết quả tìm kết cho: <span id="search-result"
-                        style="font-weight: bold;"></span></p>
-                <p id="search-not-found" style="display: none;">Không tìm thấy</p>
+            <div class="body">
+                <a class="first-img" style="width: 100%;" href="hoc-lam-web.html">
+                    <img width="100%"
+                        src="https://st.quantrimang.com/photos/image/2020/12/19/hoc-thiet-ke-web-ra-lam-gi-700-size-696x364-znd.jpg"
+                        alt="">
+                    <p>Học thiết kế website để làm gì?</p>
+                </a>
 
-                <div class="more">
-                    <a href="hoc-lam-web.html">
-                        <div style="margin-right: 10px;">
-                            <h1 class="hover-color"> Học thiết kế website để làm gì? </h1>
-                            <p>Dưới đây là top 4 ngành nghề dành cho người học thiết kế web mà chắc chắn bạn sẽ phải tìm
-                                hiểu. Đặc biệt là lựa chọn tốt nhất để bạn có thể theo đuổi.</p>
-                        </div>
-                    </a>
-                    <a href="hoc-lam-web.html">
-                        <img src="https://st.quantrimang.com/photos/image/2020/12/18/hoc-thiet-ke-web-ra-lam-gi-200.jpg"
-                            width="140px" height="140px" alt=""></a>
-                </div>
+
                 <div class="more">
                     <a href="day-deo-apple-watch.html">
                         <div style="margin-right: 10px;">
@@ -542,58 +533,40 @@
                     <a href="#"><img src="https://st.quantrimang.com/photos/image/2020/12/18/gia-cuoc-5g-200.jpg"
                             width="140px" height="140px" alt=""></a>
                 </div>
-                <div class="more">
-                    <a href="cach-nhan-data-5g.html">
-                        <div style="margin-right: 10px;">
-                            <h1 class="hover-color">Cách nhận data 5G Viettel miễn phí, không giới hạn </h1>
-                            <p>Viettel đã triển khai mạng 5G tại một số địa điểm để khách hàng có thể trải nghiệm. Và
-                                hiện tại Viettel cũng đã triển khai chương trình cung cấp trải nghiệm 5G miễn phí tới
-                                khách hàng.</p>
-                        </div>
-                    </a>
-                    <a href="cach-nhan-data-5g.html"><img
-                            src="https://st.quantrimang.com/photos/image/2020/12/01/Viettel-nhan-data-5G-200.jpg"
-                            width="140px" height="140px" alt=""></a>
-                </div>
-                <div class="more">
-                    <a href="tat-online-zalo.html">
-                        <div style="margin-right: 10px;">
-                            <h1 class="hover-color">Tắt trạng thái online Zalo như thế nào? </h1>
-                            <p>Zalo sẽ luôn hiển thị thời gian truy cập của tất cả các tài khoản ở lần truy cập gần đây
-                                nhất. Nếu muốn bạn có thể tắt thông báo mới truy cập trên Zalo như khi ẩn nick Facebook
-                                ngay cả khi online.</p>
-                        </div>
-                    </a>
-                    <a href="tat-online-zalo.html"><img
-                            src="https://st.quantrimang.com/photos/image/2020/12/18/gia-cuoc-5g-200.jpg" width="140px"
-                            height="140px" alt=""></a>
-                </div>
-                <div class="more">
-                    <a href="doi-giao-dien-fb-2020.html">
-                        <div style="margin-right: 10px;">
-                            <h1 class="hover-color">Cách đổi giao diện Facebook mới 2020</h1>
-                            <p>Giao diện mới Facebook 2020 sẽ đẹp và trực quan hơn rất nhiều, kèm theo đó là cài đặt
-                                Dark mode cho Facebook Web.</p>
-                        </div>
-                    </a>
-                    <a href="doi-giao-dien-fb-2020.html"><img
-                            src="https://st.quantrimang.com/photos/image/2020/02/11/facebook-co-giao-dien-moi-200-size-80x80-znd.jpg"
-                            width="140px" height="140px" alt=""></a>
-                </div>
-                <div class="more">
-                    <a href="dien-toan-dam-may-va-cau-chuyen-chuyen-doi-so.html">
-                        <div style="margin-right: 10px;">
-                            <h1 class="hover-color">Điện toán đám mây và câu chuyện chuyển đổi số</h1>
-                            <p>Bước đi đầu tiên cũng là bước đi hiệu quả, mạnh mẽ nhất chính là áp dụng điện toán đám
-                                mây. Điện toán đám mây được Eric Griffith ví von như “phép ẩn dụ cho internet".</p>
-                        </div>
-                    </a>
-                    <a href="dien-toan-dam-may-va-cau-chuyen-chuyen-doi-so.html"><img
-                            src="https://st.quantrimang.com/photos/image/2020/11/27/chuyen-doi-so-200.jpg" width="140px"
-                            height="140px" alt=""></a>
-                </div>
 
 
+                <div style="display: flex; justify-content: center;">
+                    <button id="watch-more">Xem thêm</button>
+                </div>
+                <div style="display: flex; justify-content: center; margin-bottom: 30px;">
+                    <img class="rotate" id="loading-icon" style="display:none" src="https://i.imgur.com/qg5SWOk.png"
+                        height="40px" width="40px" alt="">
+                </div>
+
+            </div>
+            <div class="sidebar">
+                <h1 style="font-size: 20px; border-bottom: 1px solid blue; padding: 10px;">Có lẽ bạn sẽ quan tâm
+                </h1>
+                <a href="cach-nhan-data-5g.html">
+                    <img src="https://st.quantrimang.com/photos/image/2020/12/01/Viettel-nhan-data-5G-200-size-80x80-znd.jpg"
+                        alt="">
+                    <p>Cách nhận data 5G Viettel miễn phí, không giới hạn</p>
+                </a>
+                <a href="tat-online-zalo.html">
+                    <img src="https://st.quantrimang.com/photos/image/2020/08/24/Zalo-tat-thong-bao-moi-truy-cap-200-size-80x80-znd.jpg"
+                        alt="">
+                    <p>Tắt trạng thái online Zalo như thế nào?</p>
+                </a>
+                <a href="doi-giao-dien-fb-2020.html">
+                    <img src="https://st.quantrimang.com/photos/image/2020/02/11/facebook-co-giao-dien-moi-200-size-80x80-znd.jpg"
+                        alt="">
+                    <p>Cách đổi giao diện Facebook mới 2020</p>
+                </a>
+                <a href="dien-toan-dam-may-va-cau-chuyen-chuyen-doi-so.html">
+                    <img src="https://st.quantrimang.com/photos/image/2020/11/27/chuyen-doi-so-200-size-80x80-znd.jpg"
+                        alt="">
+                    <p>Điện toán đám mây và câu chuyện chuyển đổi số</p>
+                </a>
             </div>
 
         </div>
@@ -607,21 +580,17 @@
             <div>
 
                 <a href="https://www.facebook.com/profile.php?id=100054125401462">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Facebook-icon-1.png/768px-Facebook-icon-1.png"
-                        width="30px" height="30px" alt="">
+                    <img src="https://i.imgur.com/6RvsOCX.png" width="30px" height="30px" alt="">
                 </a>
                 <a href="https://twitter.com/">
-                    <img src="https://icons-for-free.com/iconfiles/png/512/app+global+ios+media+social+tweeter+icon-1320193330528303033.png"
-                        width="30px" height="30px" alt="">
+                    <img src="https://i.imgur.com/byRqm2l.png" width="30px" height="30px" alt="">
                 </a>
                 <a href="https://www.youtube.com/channel/UCKEDezt9ebgc8ChTHGpZMjg?view_as=subscriber">
-                    <img src="https://seeklogo.net/wp-content/uploads/2020/03/YouTube-icon-SVG-512x512.png" width="30px"
-                        height="30px" alt="">
+                    <img src="https://i.imgur.com/6AqNfFT.png" width="30px" height="30px" alt="">
                 </a>
             </div>
 
         </div>
-    </div>
     </div>
     <div style="padding: 5px;" id="top-up"><img width="30px" height="30px" src="https://i.imgur.com/XfE86gl.png" alt="">
     </div>
@@ -661,11 +630,11 @@
         <input type="checkbox" id="darkmode">
         <div id="slider"></div>
     </label>
-    <script src="./js/app.js"></script>
-    <script src="./js/search.js"></script>
-    <script src="./js/account.js"></script>
-    <script src="./js/darkmode.js"></script>
-    <script src="./js/onload.js"></script>
+    <script src="../js/app.js"></script>
+    <script src="../js/search.js"></script>
+    <script src="../js/account.js"></script>
+    <script src="../js/darkmode.js"></script>
+    <script src="../js/onload.js"></script>
 </body>
 
 </html>
